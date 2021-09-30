@@ -1,0 +1,7 @@
+"NSFaceIDUsageDescriptionKey" = "MDK підтримує автентифікацію ІД обличчя на підтримуваних пристроях";
+
+"NSCameraUsageDescriptionKey" = "Дозволити використання камери";
+
+"NSPhotoLibraryAddUsageDescriptionKey" = "Наш застосунок потребує дозволу, щоб записувати фото";
+
+"NSPhotoLibraryUsageDescription" = "Дозволити доступ до бібліотеки фотографій";

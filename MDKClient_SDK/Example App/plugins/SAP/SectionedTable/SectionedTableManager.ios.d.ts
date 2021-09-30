@@ -1,0 +1,56 @@
+import { View } from 'tns-core-modules/ui/core/view';
+import { Page } from 'tns-core-modules/ui/page/page';
+export declare class Section {
+    private sectionBridge;
+    private myCallback;
+    create(params: any, callback: any): any;
+    createButtonSection(params: any, callback: any): any;
+    createContactTableSection(params: any, callback: any): any;
+    createExtensionSection(params: any, callback: any): any;
+    createGridTableSection(params: any, callback: any): any;
+    createKeyValueSection(params: any, callback: any): any;
+    createObjectCollectionSection(params: any, callback: any): any;
+    createObjectHeaderSection(params: any, callback: any): any;
+    createAnalyticCardCollectionSection(params: any, callback: any): any;
+    createChartContentSection(params: any, callback: any): any;
+    createProfileHeaderSection(params: any, callback: any): any;
+    createKPIHeaderSection(params: any, callback: any): any;
+    createKPISection(params: any, callback: any): any;
+    createObjectTableSection(params: any, callback: any): any;
+    createSimplePropertySection(params: any, callback: any): any;
+    createImageCollectionSection(params: any, callback: any): any;
+    createFormCellSection(params: any, callback: any): any;
+    setFormCellSectionItems(cellItems: any): void;
+    updateCell(params: any, row: number): void;
+    updateCells(params: any): void;
+    redraw(data: any): void;
+    reloadData(itemCount: number): void;
+    hideLazyLoadingIndicator(row?: number): void;
+    reloadRow(index: number): void;
+    updateRow(index: number, data: any): void;
+    setIndicatorState(params: any): any;
+    setSelectionMode(params: any): any;
+    refreshIndicators(): void;
+    redrawLayout(): void;
+    updateProgressBar(visible: boolean): void;
+    destroy(): void;
+    setFocus(sectionedTable: SectionedTable, row: number, keyboardVisibility: string): void;
+}
+export declare class SectionedTable extends View {
+    private sectionedTableBridge;
+    private _controller;
+    private _sections;
+    private _page;
+    private _containerCallback;
+    private _inEmbeddedFrame;
+    constructor(page: Page, containerCallback: any);
+    createNativeView(): Object;
+    initNativeView(): void;
+    disposeNativeView(): void;
+    onLoaded(): void;
+    create(sections: any[]): this;
+    redraw(): void;
+    setSearchString(searchString: string): boolean;
+    setFocus(nativeSection: any, row: number, keyboardVisibility: string): void;
+    setInEmbeddedFrame(embedded: boolean): void;
+}

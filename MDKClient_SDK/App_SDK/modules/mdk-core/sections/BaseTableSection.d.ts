@@ -1,0 +1,38 @@
+import { BaseSection } from './BaseSection';
+import { BaseTableSectionObservable } from '../observables/sections/BaseTableSectionObservable';
+import { IMDKViewFacade } from '../IMDKViewFacade';
+import { PressedItem } from '../controls/PressedItem';
+export declare abstract class BaseTableSection extends BaseSection {
+    readonly searchString: string;
+    constructor(props: any);
+    filterUpdated(filter: any): Promise<any>;
+    getOrderBy(): string;
+    getBoundData(row: any): any;
+    isDataBounded(row: any): boolean;
+    onPageUnloaded(pageExists: boolean): void;
+    loadMoreItems(): BaseTableSectionObservable;
+    onPress(cell: any, viewFacade: IMDKViewFacade): void;
+    onAccessoryButtonPress(cell: any, viewFacade: IMDKViewFacade): void;
+    getLeftKey(row: any): string[];
+    getRightKey(row: any): string[];
+    onSwipe(cell: any): void;
+    onSelectionChanged(param: any): void;
+    onSelectionModeChanged(param: any): void;
+    updateSectionSelectedRows(params: any): void;
+    setIndicatorState(newState: string, pressedItem: PressedItem): void;
+    setSelectionMode(mode: string): void;
+    getSelectionMode(): string;
+    getSelectionChangedItem(): any;
+    getSelectedItems(): any;
+    onPageLoaded(initialLoading: boolean): void;
+    searchUpdated(searchText: any): Promise<any>;
+    viewDidAppear(): void;
+    private _onPress;
+    hideLazyLoadingIndicator(): void;
+    private _onSwipe;
+    private _getLeftKey;
+    private _getRightKey;
+    private _onSelectionChanged;
+    private _onSelectionModeChanged;
+    private _updateSectionSelectedRows;
+}

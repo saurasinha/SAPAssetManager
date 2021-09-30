@@ -1,0 +1,7 @@
+"NSFaceIDUsageDescriptionKey" = "MDK podržava provjeru autentičnosti Face ID-a na podržanim uređajima";
+
+"NSCameraUsageDescriptionKey" = "Dopusti upotrebu kamere";
+
+"NSPhotoLibraryAddUsageDescriptionKey" = "Za našu aplikaciju potrebno je dopuštenje za ispis fotografija";
+
+"NSPhotoLibraryUsageDescription" = "Dopusti pristup biblioteci fotografija";

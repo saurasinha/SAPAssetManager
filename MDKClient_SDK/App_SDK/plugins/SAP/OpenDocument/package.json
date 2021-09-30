@@ -1,0 +1,17 @@
+{
+  "name": "mdk-sap-opendocument",
+  "version": "1.0.0",
+  "description": "Interact with the UIDocumentInteractionController native component",
+  "main": "OpenDocumentManager.js",
+   "nativescript": {
+      "platforms": {
+         "android": "1.0.0",
+         "ios": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP",
+  "license": "ISC"
+}

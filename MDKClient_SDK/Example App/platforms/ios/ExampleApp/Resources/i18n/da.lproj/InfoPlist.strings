@@ -1,0 +1,8 @@
+"NSFaceIDUsageDescription" = "MDK understøtter Face ID-autentifikation på understøttede enheder";
+
+"NSCameraUsageDescription" = "Tillad kameraanvendelse";
+
+"NSPhotoLibraryAddUsageDescription" = "Vores applikation kræver tilladelse til at skrive fotos";
+
+"NSPhotoLibraryUsageDescription" = "Tillad adgang til fotobibliotek";
+

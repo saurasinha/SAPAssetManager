@@ -1,0 +1,82 @@
+// Add your native dependencies here:
+println '---------------------------APP.GRADLE---------------------------------'
+println "$projectDir"
+
+android {
+  compileSdkVersion 29
+  buildToolsVersion "29.0.3"
+  defaultConfig {  
+    generatedDensities = []
+    applicationId = "com.sap.mobile.platform.SnowblindClient"
+    minSdkVersion 23
+    multiDexEnabled true
+    ndk {
+      abiFilters.clear()
+      abiFilters.addAll(['armeabi-v7a','arm64-v8a','x86','x86_64'])
+    }
+  }  
+  aaptOptions {
+    additionalParameters "--no-version-vectors"
+  }
+
+  compileOptions {
+      sourceCompatibility 1.8
+      targetCompatibility 1.8
+  }
+}
+
+configurations.all {
+    // Uncomment to refresh dependencies
+    // resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+
+    // BCP-2070499715, BCP-2070499665, BCP-2080380913 : 
+    // Mismatch of androidx.fragment version between Android SDK (1.2.5) and NativeScript (1.1.0)
+    // temporary workaround is to force downgrade of the fragment version to 1.1.0
+    // resolutionStrategy.force 'androidx.fragment:fragment:1.1.0'
+}
+
+def googleServicesJsonPath = "$projectDir/../../../app/App_Resources/Android/google-services.json"
+def googleServicesJsonExist = { ->
+    def servicesFile = file(googleServicesJsonPath)
+    return servicesFile.exists()
+}()
+
+task copyGoogleServicesJson {
+    if (googleServicesJsonExist) {
+        println "copy google-services.json"
+        copy {
+            from googleServicesJsonPath
+            into "$projectDir"
+        }
+    }
+}
+
+allprojects {
+  def mavenGradle = file("$projectDir/../../../../AndroidStudioProjects/MDKClient/maven.gradle")
+  if (mavenGradle.exists()) {
+    apply from: mavenGradle.getAbsolutePath()
+  } else {
+    def repos = [:]
+    repos.sap_maven_url = System.getenv('SAP_MAVEN_URL')
+    ext.repos = repos
+  }
+
+  repositories {
+    def fioriLibsUrl = "../../../libs/android/FioriLibs/m2repository"
+    if (file(fioriLibsUrl).exists()) {
+      maven { url fioriLibsUrl }
+    }
+
+    if (repos && repos.sap_maven_url && repos.sap_maven_url.trim()) {
+      maven { url repos.sap_maven_url }
+    } else {
+      google()
+      jcenter()
+    }
+  }
+}
+
+if (googleServicesJsonExist) {
+  println "apply google-services"
+  apply plugin: 'com.google.gms.google-services'
+}

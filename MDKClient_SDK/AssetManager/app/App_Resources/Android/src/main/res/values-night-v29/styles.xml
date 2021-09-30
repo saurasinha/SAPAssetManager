@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+  <style name="MDKAppTheme" parent="FioriTheme">
+        <item name="android:statusBarColor">@color/sap_ui_page_footer_background</item>
+        <item name="searchViewStyle">@style/MDKSearchViewStyle</item>
+        <item name="toolbarStyle">@style/MDKActionbarStyle</item>
+    </style>
+    <style name="MDKSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchHintIcon">@null</item>
+    </style>
+    <style name="MDKActionbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/MDKAppBarColor</item>
+        <item name="titleTextColor">@color/MDKAppBarTitleColor</item>
+        <item name="android:paddingRight">@dimen/design_app_bar_right_padding</item>
+        <item name="contentInsetStart">0dp</item>
+    </style>
+</resources>

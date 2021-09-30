@@ -1,0 +1,16 @@
+{
+  "name": "mdk-sap-dataconverter",
+  "version": "1.0.0",
+  "description": "Convert native data types to common types.",
+  "main": "DataConverter.js",
+   "nativescript": {
+      "platforms": {
+         "ios": "1.0.0",
+         "android": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP"
+}

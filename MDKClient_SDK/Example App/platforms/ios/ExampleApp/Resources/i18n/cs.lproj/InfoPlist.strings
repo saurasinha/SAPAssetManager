@@ -1,0 +1,8 @@
+"NSFaceIDUsageDescription" = "MDK podporuje autentizaci ID tváře na podporovaných zařízeních";
+
+"NSCameraUsageDescription" = "Povolit použití kamery";
+
+"NSPhotoLibraryAddUsageDescription" = "Naše aplikace vyžaduje povolení k zápisu fotografií";
+
+"NSPhotoLibraryUsageDescription" = "Povolit přístup do knihovny fotografií";
+

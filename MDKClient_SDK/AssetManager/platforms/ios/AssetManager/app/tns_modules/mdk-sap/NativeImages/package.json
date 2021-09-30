@@ -1,0 +1,15 @@
+{
+  "name": "mdk-sap-nativeImages",
+  "version": "1.0.0",
+  "description": "Fetch the natively modified images",
+  "main": "NativeImages.js",
+   "nativescript": {
+      "platforms": {
+         "ios": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP"
+}

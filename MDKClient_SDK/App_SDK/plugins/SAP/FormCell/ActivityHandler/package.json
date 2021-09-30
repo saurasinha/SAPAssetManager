@@ -1,0 +1,15 @@
+{
+  "name": "mdk-sap-activityhandler",
+  "version": "1.0.0",
+  "description": "Interact with the form cell activity native code.",
+  "main": "ActivityHandler.js",
+   "nativescript": {
+      "platforms": {
+         "android": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP"
+}

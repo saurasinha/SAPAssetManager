@@ -1,0 +1,7 @@
+"NSFaceIDUsageDescriptionKey" = "يُدعم MDK مصادقة معرف الوجه في الأجهزة المدعومة";
+
+"NSCameraUsageDescriptionKey" = "السماح باستخدام الكاميرا";
+
+"NSPhotoLibraryAddUsageDescriptionKey" = "يحتاج تطبيقنا إلى إذن للكتابة على الصور الفوتوغرافية";
+
+"NSPhotoLibraryUsageDescription" = "السماح بالوصول إلى مكتبة الصور الفوتوغرافية";

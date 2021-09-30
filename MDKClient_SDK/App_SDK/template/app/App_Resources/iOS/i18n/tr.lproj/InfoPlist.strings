@@ -1,0 +1,7 @@
+"NSFaceIDUsageDescriptionKey" = "MDK, desteklenen aygıtlarda yüz tanıtıcısı kimlik doğrulamasını destekliyor";
+
+"NSCameraUsageDescriptionKey" = "Kamera kullanımına izin ver";
+
+"NSPhotoLibraryAddUsageDescriptionKey" = "Uygulamamızın fotoğraf yazması için izin gerekli";
+
+"NSPhotoLibraryUsageDescription" = "Fotoğraf kitaplığına erişime izin ver";

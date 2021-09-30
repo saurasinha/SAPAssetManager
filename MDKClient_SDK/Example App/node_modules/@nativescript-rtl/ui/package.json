@@ -1,0 +1,78 @@
+{
+  "_from": "@nativescript-rtl/ui@0.1.6",
+  "_id": "@nativescript-rtl/ui@0.1.6",
+  "_inBundle": false,
+  "_integrity": "sha512-HfKiPUOAyEYNhQl6UH/EHo2jLfC3TSXI62APmFHVmLrktU59XPDFJb0UY8tnyg7w/szjAdtffM7mUJkaH80Kbw==",
+  "_location": "/@nativescript-rtl/ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@nativescript-rtl/ui@0.1.6",
+    "name": "@nativescript-rtl/ui",
+    "escapedName": "@nativescript-rtl%2fui",
+    "scope": "@nativescript-rtl",
+    "rawSpec": "0.1.6",
+    "saveSpec": null,
+    "fetchSpec": "0.1.6"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@nativescript-rtl/ui/-/ui-0.1.6.tgz",
+  "_shasum": "8a84091860fa1637c177df7f39e7651321a05d4e",
+  "_spec": "@nativescript-rtl/ui@0.1.6",
+  "_where": "/Users/priyaranjankumar/Downloads/ipa/SAPAssetManager/MDKClient_SDK/Example App",
+  "author": {
+    "name": "xlmnxp"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Add right-to-left support to NativeScript framework",
+  "devDependencies": {
+    "prompt": "^1.0.0",
+    "rimraf": "^2.6.3",
+    "semver": "^5.6.0",
+    "tns-core-modules": "^6.0.0",
+    "tns-platform-declarations": "^6.0.0",
+    "tslint": "^5.12.1",
+    "typescript": "~3.4.5"
+  },
+  "homepage": "https://github.com/nativescript-rtl/ui",
+  "keywords": [
+    "rtl",
+    "nativescript",
+    "ui",
+    "tns",
+    "gridlayout",
+    "flexboxlayout",
+    "warplayout",
+    "layout"
+  ],
+  "license": "MIT",
+  "main": "main.js",
+  "name": "@nativescript-rtl/ui",
+  "nativescript": {
+    "platforms": {
+      "android": "6.0.0",
+      "ios": "6.0.1"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "npm run tsc && npm run build.native",
+    "build.native": "node scripts/build-native.js",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+    "demo.android": "npm run tsc && cd ../demo && tns run android --emulator",
+    "demo.ios": "npm run tsc && cd ../demo && tns run ios --emulator",
+    "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
+    "postclone": "npm i && node scripts/postclone.js",
+    "prepack": "npm run build.native",
+    "tsc": "npm i && tsc",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\""
+  },
+  "typings": "main.d.ts",
+  "version": "0.1.6"
+}

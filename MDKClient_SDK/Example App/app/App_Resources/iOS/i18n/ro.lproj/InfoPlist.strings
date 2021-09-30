@@ -1,0 +1,8 @@
+"NSFaceIDUsageDescriptionKey" = "MDK acceptă autentificare ID față pe dispozitive suportate";
+
+"NSCameraUsageDescriptionKey" = "Permitere utilizare cameră";
+
+"NSPhotoLibraryAddUsageDescriptionKey" = "Aplicația noastră are nevoie de permisiune pentru a scrie fotografiile";
+
+"NSPhotoLibraryUsageDescription" = "Permitere acces bibliotecă de fotografii";
+

@@ -1,0 +1,5 @@
+{
+  "include": [
+    "!**/(bundle|demo|default).js"
+  ]
+}

@@ -1,0 +1,7 @@
+"NSFaceIDUsageDescriptionKey" = "MDK תומך באימות זיהוי פני שטח של התקנים נתמכים";
+
+"NSCameraUsageDescriptionKey" = "אפשר שימוש במצלמה";
+
+"NSPhotoLibraryAddUsageDescriptionKey" = "היישום שלנו צריך הרשאה כדי לכתוב תמונות";
+
+"NSPhotoLibraryUsageDescription" = "אפשר גישה לספריית התמונות";

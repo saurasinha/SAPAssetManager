@@ -1,0 +1,39 @@
+{
+  "nativescript": {
+    "id": "com.example.app",
+    "tns-android": {
+      "version": "6.5.3"
+    },
+    "tns-ios": {
+      "version": "6.5.2"
+    }
+  },
+  "dependencies": {
+    "@nativescript-rtl/ui": "0.1.6",
+    "@nativescript/core": "6.5.27",
+    "@nota/nativescript-accessibility-ext": "6.5.1",
+    "@nstudio/nativescript-pulltorefresh": "2.0.0",
+    "crypto-js": "3.1.9-1",
+    "mdk-core": "file:modules/mdk-core",
+    "mdk-sap": "file:plugins/SAP",
+    "nativescript-ui-sidedrawer": "8.0.1",
+    "nativescript-worker-loader": "0.12.1",
+    "tns-core-modules": "6.5.27",
+    "tns-platform-declarations": "6.5.15",
+    "toolbar-plugin": "file:plugins/toolbar-plugin",
+    "url": "0.11.0",
+    "zip-plugin": "file:plugins/zip-plugin"
+  },
+  "devDependencies": {
+    "@types/node": "14.0.4",
+    "nativescript-dev-babel": "0.2.1",
+    "@nativescript/webpack": "3.0.9",
+    "copy-webpack-plugin": "6.1.0",
+    "typescript": "3.7.4",
+    "rtl-detect": "1.0.2"
+  },
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "readme": "NativeScript Application"
+}

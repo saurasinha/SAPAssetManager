@@ -1,0 +1,34 @@
+export declare class ODataServiceProvider {
+    static getServiceTimeZoneAbbreviation(): string;
+    static clear(context: any, name: any): Promise<unknown>;
+    download(params: any): Promise<any>;
+    initOfflineStore(context: any, params: any): Promise<any>;
+    upload(params: any): Promise<any>;
+    close(params: any): Promise<any>;
+    clear(params: any): Promise<any>;
+    create(params: any): Promise<any>;
+    open(context: any, params: any): Promise<any>;
+    read(entitySet: any, properties: any, queryString: any, headers: any, requestOptions: any, pageSize?: any): Promise<any>;
+    createEntity(odataCreator: any): Promise<any>;
+    updateEntity(odataUpdater: any): Promise<any>;
+    deleteEntity(odataDeleter: any): Promise<any>;
+    deleteMediaEntity(entitySetName: any, queryString: any, readLink: any, headers: any, requestOptions: any): Promise<any>;
+    createMediaEntity(entitySetName: any, properties: any, headers: any, requestOptions: any, media: any): Promise<any>;
+    createRelatedMediaEntity(entitySetName: any, properties: any, parent: any, headers: any, requestOptions: any, media: any): Promise<any>;
+    downloadMedia(entitySet: any, queryString: any, readLink: any, headers: any, requestOptions: any): Promise<any>;
+    isMediaLocal(entitySet: any, readLink: any): Promise<any>;
+    beginChangeSet(): Promise<any>;
+    cancelChangeSet(): Promise<any>;
+    commitChangeSet(): Promise<any>;
+    count(entitySet: any, properties: any, queryString: any): Promise<any>;
+    callFunction(functionName: any, functionParameters: any, functionOptions: any): Promise<any>;
+    getPropertyType(params: any): string;
+    getVersion(params: any): number;
+    getOfflineStoreStatus(): string;
+    downloadStream(entitySetName: any, properties: any, query: any, readLink: any, headers: any, requestOptions: any): Promise<any>;
+    uploadStream(entitySetName: any, properties: any, query: any, readLink: any, headers: any, requestOptions: any): Promise<any>;
+    undoPendingChanges(entitySetName: any, queryOptions: any, readLink: any): Promise<any>;
+    getOfflineParameter(name: any): any;
+    setOfflineParameter(name: any, value: any): void;
+    getPreviousUser(): string;
+}

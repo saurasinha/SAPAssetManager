@@ -1,0 +1,51 @@
+{
+  "_from": "tns-core-modules-widgets@latest",
+  "_id": "tns-core-modules-widgets@6.5.10",
+  "_inBundle": false,
+  "_integrity": "sha512-esZPbnm0wIn89AoFxdfhFuG0a/JE9A9k3ovBRpzs9O9d/JrChlgkTX4lSRQz6xBHLC1UVaqiTc/DNBGbdaeCyA==",
+  "_location": "/tns-core-modules-widgets",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "tns-core-modules-widgets@latest",
+    "name": "tns-core-modules-widgets",
+    "escapedName": "tns-core-modules-widgets",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "/@nativescript/core"
+  ],
+  "_resolved": "https://registry.npmjs.org/tns-core-modules-widgets/-/tns-core-modules-widgets-6.5.10.tgz",
+  "_shasum": "e387c075967aa4e24e187141a93569b121c3a0a8",
+  "_spec": "tns-core-modules-widgets@latest",
+  "_where": "/Users/priyaranjankumar/Downloads/ipa_new/SAPAssetManager/MDKClient_SDK/AssetManager/node_modules/@nativescript/core",
+  "author": {
+    "name": "NativeScript team"
+  },
+  "bugs": {
+    "url": "https://github.com/NativeScript/NativeScript/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Native widgets used in the NativeScript framework.",
+  "homepage": "https://github.com/NativeScript/NativeScript/blob/master/tns-core-modules-widgets#readme",
+  "license": "Apache-2.0",
+  "name": "tns-core-modules-widgets",
+  "nativescript": {
+    "platforms": {
+      "ios": "6.0.0",
+      "android": "6.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NativeScript/NativeScript.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "6.5.10"
+}

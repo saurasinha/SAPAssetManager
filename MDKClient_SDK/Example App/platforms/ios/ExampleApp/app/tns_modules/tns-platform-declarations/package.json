@@ -1,0 +1,62 @@
+{
+  "_from": "tns-platform-declarations@6.5.15",
+  "_id": "tns-platform-declarations@6.5.15",
+  "_inBundle": false,
+  "_integrity": "sha512-gCUt2rjPTndp0K6xrgo6tFJvmkAsVOnIvebUUXMdLsNrJScs+OX4pL4DeIGMHGm/ciLqBlG5ZPkTOi8ZJCZuAQ==",
+  "_location": "/tns-platform-declarations",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "tns-platform-declarations@6.5.15",
+    "name": "tns-platform-declarations",
+    "escapedName": "tns-platform-declarations",
+    "rawSpec": "6.5.15",
+    "saveSpec": null,
+    "fetchSpec": "6.5.15"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tns-platform-declarations/-/tns-platform-declarations-6.5.15.tgz",
+  "_shasum": "985c220a5595e27035d6122eea6f41987ef2935a",
+  "_spec": "tns-platform-declarations@6.5.15",
+  "_where": "/Users/priyaranjankumar/Downloads/ipa/SAPAssetManager/MDKClient_SDK/Example App",
+  "author": {
+    "name": "NativeScript Team",
+    "email": "oss@nativescript.org",
+    "url": "https://nativescript.org"
+  },
+  "bugs": {
+    "url": "https://github.com/NativeScript/NativeScript/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Platform-specific TypeScript declarations for NativeScript for accessing native objects",
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  },
+  "homepage": "https://github.com/NativeScript/NativeScript#readme",
+  "keywords": [
+    "NativeScript",
+    "TypeScript",
+    "declarations",
+    "native",
+    "platform-specific",
+    "tns",
+    "ts",
+    "ns"
+  ],
+  "license": "Apache-2.0",
+  "main": "",
+  "name": "tns-platform-declarations",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/NativeScript/NativeScript.git"
+  },
+  "scripts": {
+    "package-tag": "npm version $npm_package_version-$PACKAGE_VERSION --no-git-tag-version",
+    "test": "tsc"
+  },
+  "version": "6.5.15"
+}

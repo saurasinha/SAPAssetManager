@@ -1,0 +1,15 @@
+{
+  "name": "mdk-sap-message-dialog",
+  "version": "1.0.0",
+  "description": "Launch a Fiori style message dialog.",
+  "main": "MessageDialog.js",
+   "nativescript": {
+      "platforms": {
+         "ios": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP"
+}

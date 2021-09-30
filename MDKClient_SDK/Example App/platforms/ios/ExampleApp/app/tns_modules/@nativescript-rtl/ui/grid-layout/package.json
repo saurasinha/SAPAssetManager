@@ -1,0 +1,5 @@
+{
+    "name": "grid-layout",
+    "main": "grid-layout.js",
+    "typings": "index.d.ts"
+}

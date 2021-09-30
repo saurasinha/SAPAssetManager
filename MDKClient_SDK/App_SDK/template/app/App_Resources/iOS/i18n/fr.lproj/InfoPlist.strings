@@ -1,0 +1,8 @@
+"NSFaceIDUsageDescription" = "MDK prend en charge l'authentification par Face ID sur les appareils compatibles.";
+
+"NSCameraUsageDescription" = "Autoriser l'utilisation de la caméra";
+
+"NSPhotoLibraryAddUsageDescription" = "Notre application a besoin de votre autorisation pour traiter les photos.";
+
+"NSPhotoLibraryUsageDescription" = "Autoriser l'accès à la photothèque";
+

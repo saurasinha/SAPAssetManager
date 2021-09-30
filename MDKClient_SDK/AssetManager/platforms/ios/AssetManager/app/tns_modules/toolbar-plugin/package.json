@@ -1,0 +1,23 @@
+{
+  "name": "toolbar-plugin",
+  "version": "1.0.0",
+  "main": "toolbar-plugin.js",
+  "nativescript": {
+    "platforms": {
+      "ios": "6.5.2",
+      "android": "6.5.3"
+    },
+    "tns-ios": {
+      "version": "6.5.2"
+    },
+    "tns-android": {
+      "version": "6.5.3"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": {
+    "name": "SAP"
+  }
+}

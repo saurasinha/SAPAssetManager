@@ -1,0 +1,8 @@
+"NSFaceIDUsageDescriptionKey" = "在支援的裝置上，MDK 支援 Face ID 權限";
+
+"NSCameraUsageDescriptionKey" = "允許使用相機";
+
+"NSPhotoLibraryAddUsageDescriptionKey" = "應用程式需要寫入照片的權限";
+
+"NSPhotoLibraryUsageDescription" = "允許存取照片圖庫";
+

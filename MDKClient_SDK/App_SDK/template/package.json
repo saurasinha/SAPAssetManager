@@ -1,0 +1,39 @@
+{
+  "nativescript": {
+    "id": "com.sap.mdkclient.Blank",
+    "templateVersion": "v2",
+    "tns-android": {
+      "version": "6.5.3"
+    },
+    "tns-ios": {
+      "version": "6.5.2"
+    }
+  },
+  "dependencies": {
+    "@nativescript/core": "6.5.27",
+    "@nativescript-rtl/ui": "0.1.6",
+    "@nstudio/nativescript-pulltorefresh": "2.0.0",
+    "@nota/nativescript-accessibility-ext": "6.5.1",
+    "tns-core-modules": "6.5.27",
+    "tns-platform-declarations": "6.5.15",
+    "crypto-js": "3.1.9-1",
+    "nativescript-ui-sidedrawer": "8.0.1",
+    "nativescript-worker-loader": "0.12.1",
+    "url": "0.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "14.0.4",
+    "nativescript-dev-babel": "0.2.1",
+    "@nativescript/webpack": "3.0.9",
+    "copy-webpack-plugin": "6.1.0",
+    "typescript": "3.7.4",
+    "rtl-detect": "1.0.2"
+  },
+  "name": "sap-template-mdkclient",
+  "version": "1.0.0",
+  "templateType": "App template",
+  "description": "MDK NativeScript Metadata Player Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "readme": "ERROR: No README data found!"
+}

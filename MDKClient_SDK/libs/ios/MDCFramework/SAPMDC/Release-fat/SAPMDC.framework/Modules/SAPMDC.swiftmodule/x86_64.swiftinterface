@@ -1,0 +1,1053 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SAPMDC
+import AVFoundation
+import Foundation
+import MessageUI
+import MobileCoreServices
+import Photos
+import QuickLook
+import SAPCommon
+import SAPFiori
+import SAPFioriFlows
+import SAPFoundation
+@_exported import SAPMDC
+import SAPOData
+import SAPOfflineOData
+import Swift
+import SystemConfiguration
+import UIKit
+import UserNotifications
+import WebKit
+@_inheritsConvenienceInitializers @objc(SharedLoggerManagerSwift) public class SharedLoggerManager : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: SAPMDC.SharedLoggerManager
+  public static let ERROR: Swift.String
+  public static let ERROR_CREATE_DOC_DIR: Swift.String
+  public static let ERROR_GET_SERVICE_URL: Swift.String
+  public static let ERROR_GET_CPMS_OBSERVER: Swift.String
+  public static let ERROR_TOKEN_NOT_RECEIVED: Swift.String
+  public static let ERROR_STORE_TOKEN_FAILED: Swift.String
+  public static let ERROR_GET_TOKEN_FAILED: Swift.String
+  public static let ERROR_DELETE_TOKEN_FAILED: Swift.String
+  public static let ERROR_REQUEST_FAILED: Swift.String
+  public static let ERROR_SAVE_KEYCHAIN_FAILED: Swift.String
+  public static let ERROR_STORE_PUT_FAILED: Swift.String
+  public static let ERROR_STORE_GET_FAILED: Swift.String
+  public static let ERROR_STORE_GET_KEYS_FAILED: Swift.String
+  public static let ERROR_STORE_CREATE_FAILED: Swift.String
+  public static let WARN_LOGLEVEL_INVALID: Swift.String
+  public static let WARN_CALLBACK_INVALID: Swift.String
+  public static let WARN_PASSCODE_POLICY_INVALID: Swift.String
+  public static let ERROR_FAILED_DELETE_LOGFILE: Swift.String
+  public static let ERROR_GET_SAP_PASSPORT_HEADER: Swift.String
+  public static let INFO_GET_SECURE_STORE_SHARED_INSTANCE: Swift.String
+  @objc public func log(_ name: Swift.String, withSeverity severity: Swift.String?, message: Swift.String)
+  public func mdcError(message: Swift.String, _ arguments: Swift.CVarArg...)
+  public func mdcWarn(message: Swift.String, _ arguments: Swift.CVarArg...)
+  public func mdcInfo(message: Swift.String, _ arguments: Swift.CVarArg...)
+  public func mdcDebug(message: Swift.String, _ arguments: Swift.CVarArg...)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ObjectTableSection : SAPMDC.BaseTableSection {
+  @objc override public func redraw(data: Foundation.NSDictionary)
+  @objc override public func updateRow(index: Swift.Int, data: Foundation.NSDictionary)
+  @objc override public func setIndicatorState(params: Foundation.NSDictionary)
+  @objc public func setSelectionMode(params: Foundation.NSDictionary)
+  @objc override public func refreshIndicators()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ButtonSection : SAPMDC.BaseSection {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ImageCollectionSection : SAPMDC.BaseSection {
+  @objc deinit
+}
+public enum WelcomeScreenError : Swift.Error {
+  case demoModeRequested
+  public static func == (a: SAPMDC.WelcomeScreenError, b: SAPMDC.WelcomeScreenError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol WelcomeStepUI : AnyObject {
+  var headlineLabel: UIKit.UILabel! { get }
+  var detailLabel: UIKit.UILabel! { get }
+  var primaryActionButton: SAPFiori.FUIOnboardingButton! { get }
+  var footnoteLabel: UIKit.UILabel! { get }
+  var footnoteActionButton: SAPFiori.FUIOnboardingButton! { get }
+  @available(iOS, deprecated, message: "Instead, use 'isDemoModeAvailable' property ")
+  func setDemoAvailable(_ available: Swift.Bool)
+  var isDemoModeAvailable: Swift.Bool { get set }
+}
+extension FUIWelcomeScreen : SAPMDC.WelcomeStepUI {
+  public var isDemoModeAvailable: Swift.Bool {
+    get
+    set
+  }
+  @available(iOS, deprecated, message: "Instead, use 'isDemoModeAvailable' property ")
+  public func setDemoAvailable(_ available: Swift.Bool)
+}
+extension OnboardingInfoKey {
+  public static let showScanScreen: SAPFioriFlows.OnboardingInfoKey
+}
+@objc @_inheritsConvenienceInitializers public class KPIHeader : ObjectiveC.NSObject {
+  public func populateKPIHeader(_ kpiHeader: SAPFiori.FUIKPIHeader, withParams params: Swift.Dictionary<Swift.String, Any>, viewController: SAPMDC.SectionedTableViewController, kpiHeaderInitializer: @escaping ([SAPFiori.FUIKPIContainer]) -> Swift.Void, kpiHeaderSection: SAPMDC.KPIHeaderSection!)
+  public func setKPIHeader(_ kpiHeader: SAPFiori.FUIKPIHeader, withParams params: Swift.Dictionary<Swift.String, Any>, viewController: SAPMDC.SectionedTableViewController, kpiHeaderSection: SAPMDC.KPIHeaderSection?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ContactCell : ObjectiveC.NSObject {
+  public static func configureContactCell(cell: SAPFiori.FUIContactCell, params: Foundation.NSDictionary, viewController: SAPMDC.SectionedTableViewController, row: Swift.Int)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ODataRelatedCreator) public class ODataRelatedCreator : SAPMDC.BaseODataCruder {
+  public func execute(dataService: Any, changeSetManager: Any?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ContactCellSection : SAPMDC.BaseTableSection {
+  @objc override public func redraw(data: Foundation.NSDictionary)
+  @objc override public func updateRow(index: Swift.Int, data: Foundation.NSDictionary)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class AnalyticCard : ObjectiveC.NSObject {
+  public func configureAnalyticCard(_ analyticCard: SAPFiori.FUIChartCardCollectionViewCell, params: Foundation.NSDictionary)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ObjectHeaderSection : SAPMDC.BaseSection {
+  public var items: [Swift.AnyObject]
+  public var styles: [Swift.AnyObject]
+  @objc override public func redraw(data: Foundation.NSDictionary)
+  @objc override public func reloadData(itemCount: Swift.Int)
+  @objc override public func reloadRow(index: Swift.Int)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ObjectCollectionSection : SAPMDC.BaseSection {
+  @objc override public func redraw(data: Foundation.NSDictionary)
+  @objc override public func updateRow(index: Swift.Int, data: Foundation.NSDictionary)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(QueryOptionsReadParams) public class QueryOptionsReadParams : SAPMDC.ReadParams {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class Search : ObjectiveC.NSObject {
+  public func schedule(searchString: Swift.String, target: Any, selector: ObjectiveC.Selector)
+  public func immediateSearch(searchString: Swift.String, target: Any, selector: ObjectiveC.Selector)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CrudParamsHelper {
+  public static let MALFORMEDPARAM: Swift.String
+  public static func getHeadersFromParams(_ params: [Swift.String : Any]) -> Foundation.NSDictionary?
+  public static func getServiceFromParams(_ params: [Swift.String : Any]) throws -> [Swift.String : Any]
+  public static func getServiceUrlFromService(_ params: [Swift.String : Any]) throws -> Swift.String
+  public static func getEntitySetNameFromService(_ params: [Swift.String : Any]) throws -> Swift.String
+  public static func getPropertiesFromService(_ params: [Swift.String : Any]) throws -> [Swift.String : Any]?
+  public static func getLinkCreatorsFromParams(_ params: [Swift.String : Any]) throws -> [SAPMDC.ODataLinkCreator]?
+  public static func getLinkUpdatersFromParams(_ params: [Swift.String : Any]) throws -> [SAPMDC.ODataLinkUpdater]?
+  public static func getLinkDeletersFromParams(_ params: [Swift.String : Any]) throws -> [SAPMDC.ODataLinkDeleter]?
+  public static func getRequestOptionsFromService(_ params: [Swift.String : Any]) throws -> Foundation.NSDictionary?
+  public static func getParentFromParams(_ params: [Swift.String : Any]) throws -> [Swift.String : Any]
+  public static func getPropertyFromParent(_ params: [Swift.String : Any]) throws -> Swift.String
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KeyValueSection : SAPMDC.BaseSection {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(VersionInfoSwift) public class VersionInfo : ObjectiveC.NSObject {
+  @objc public static func getVersionInfo() -> Any
+  @objc public static func setVersionInfo(version: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ProfileHeaderSection : SAPMDC.BaseSection {
+  public var items: [Swift.AnyObject]
+  @objc override public func redraw(data: Foundation.NSDictionary)
+  @objc override public func reloadData(itemCount: Swift.Int)
+  @objc override public func reloadRow(index: Swift.Int)
+  @objc deinit
+}
+@objc(PushNotificationSwift) final public class PushNotification : ObjectiveC.NSObject {
+  @objc public init(applicationId: Swift.String, baseUrl: Foundation.URL, deviceId: Swift.String, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc final public func registerForPushNotification()
+  @objc final public func didFailToRegisterNotifications(error: Swift.Error)
+  @objc final public func didRegisterForRemoteNotifications(deviceToken: Foundation.Data)
+  @objc final public func unregisterForPushNotification()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ParameterHelper {
+  public static func getParameterAsString(cellParams: [Swift.String : Any], paramName: Swift.String) -> Swift.String?
+  public static func getParameterAsBool(cellParams: [Swift.String : Any], paramName: Swift.String) -> Swift.Bool?
+  public static func getParameterAsInt(cellParams: [Swift.String : Any], paramName: Swift.String) -> Swift.Int?
+  public static func getParameterAsDouble(cellParams: [Swift.String : Any], paramName: Swift.String) -> Swift.Double?
+  public static func getParameterAsStringArray(cellParams: [Swift.String : Any], paramName: Swift.String) -> [Swift.String]?
+  public static func getParameterAsIntArray(cellParams: [Swift.String : Any], paramName: Swift.String) -> [Swift.Int]?
+  public static func getParameterAsColor(cellParams: [Swift.String : Any], paramName: Swift.String) -> UIKit.UIColor?
+  public static func getParameterAsDictionary(cellParams: [Swift.String : Any], paramName: Swift.String) -> [Swift.String : Any]?
+  public static func getParameterAsNSDictionaryArray(cellParams: [Swift.String : Any], paramName: Swift.String) -> [Foundation.NSDictionary]?
+  public static func getParameterAsDate(cellParams: [Swift.String : Any], paramName: Swift.String) -> Foundation.Date?
+  public static func getParameterAsArray(cellParams: [Swift.String : Any], paramName: Swift.String) -> [Any]?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class FormCellContainerViewController : SAPFiori.FUIFormTableViewController, SAPMDC.AttachmentFormViewChangeDelegate, UIKit.UITextFieldDelegate {
+  public var aDelegates: [Foundation.IndexPath : SAPMDC.AttachmentFormViewDelegate]
+  @objc public var numberOfSections: Swift.Int
+  @objc public var numberOfRowsInSection: [Swift.Int]
+  @objc public var sectionNames: [Swift.String]
+  @objc public var isInPopover: Swift.Bool
+  @objc public var tableViewForExtension: UIKit.UITableView?
+  @objc public var tableViewCellForExtension: UIKit.UITableViewCell?
+  @objc public var isInEmbeddedFrame: Swift.Bool
+  public func didChangeValue(for name: Swift.String!, with data: [Swift.String : Any])
+  public func reloadSectionContainer(at indexPath: Foundation.IndexPath)
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc override dynamic open func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGFloat
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc public func addFormCell(_ params: [Swift.String : Any], withDelegate delegate: SAPMDC.FormCellItemDelegate)
+  @objc public func updateFormCell(_ params: [Swift.String : Any], cellRow row: Swift.Int, cellSection section: Swift.Int)
+  @objc public func updateFormCells(_ params: Foundation.NSArray, withStyle style: Swift.String?)
+  @objc public func setLocale(_ locale: Swift.String)
+  public func updateParamsWithValue(_ newValue: Swift.Dictionary<Swift.String, Any>, _ indexPath: Foundation.IndexPath)
+  @objc public func setFocus(_ row: Swift.Int, cellSection section: Swift.Int)
+  @objc public func hideLazyLoadingIndicator(_ row: Swift.Int, cellSection section: Swift.Int)
+  public func getCellTypesForSection() -> [Swift.Int : [[Swift.String : Any]]]
+  @objc open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc override dynamic public init(style: UIKit.UITableView.Style)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init()
+  @objc deinit
+}
+extension UINavigationController {
+  @objc override dynamic open var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+}
+@objc @_hasMissingDesignatedInitializers public class FUIButtonWrapper : SAPFiori.FUIButton {
+  public var cellRow: Swift.Int
+  weak public var containerCell: SAPFiori.FUIBaseTableViewCell?
+  public static var reuseIdentifier: Swift.String {
+    get
+  }
+  public static var FUIButtonWrapperTag: Swift.Int {
+    get
+  }
+  public func configure(withMetadata metadata: Swift.Dictionary<Swift.String, Any>)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(LoggerManagerSwift) public class LoggerManager : ObjectiveC.NSObject {
+  @objc public static func attachUploaderToRootLogger(WithMaxFileSize maxFileSizeInMegaBytes: Swift.Int) throws
+  @objc public static func uploadLogs(backendURL: Swift.String, applicationID: Swift.String? = nil, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public static func addLocalFileHandler(withFileName fileName: Swift.String, maxFileSize maxFileSizeInMegaBytes: Swift.Int) throws
+  @objc public static func activateLogLevel(withSeverity level: Swift.String)
+  @objc public static func log(_ message: Swift.String, withSeverity severity: Swift.String?)
+  @objc public static func clearLog() throws
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(ODataLinkDeleter) public class ODataLinkDeleter : SAPMDC.ODataLinker {
+  override public func execute(_ sourceEntity: SAPOData.EntityValue, dataService: Any, changeSetManager: SAPMDC.ChangeSetManager) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FocusUtil {
+  public static func setFocus(_ tableView: UIKit.UITableView, indexPath: Foundation.IndexPath)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ProfileHeader : ObjectiveC.NSObject {
+  public func setProfileHeader(_ profileHeader: SAPFiori.FUIProfileHeader, withParams params: Swift.Dictionary<Swift.String, Any>, viewController: SAPMDC.SectionedTableViewController)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class MDKPassport : ObjectiveC.NSObject {
+  public init(rootContextId: Foundation.UUID)
+  @objc public static var sharedInstance: SAPMDC.MDKPassport
+  @objc public func getHeaderValue(params: Foundation.NSDictionary) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class GridTableSection : SAPMDC.BaseTableSection {
+  @objc override public func redraw(data: Foundation.NSDictionary)
+  @objc override public func updateRow(index: Swift.Int, data: Foundation.NSDictionary)
+  @objc deinit
+}
+extension ChartContent : SAPFiori.FUIChartSummaryDataSource {
+  public func chartView(_ chartView: SAPFiori.FUIChartView, summaryItemForCategory categoryIndex: Swift.Int) -> SAPFiori.FUIChartSummaryItem?
+  public func chartSummaryView(_ chartSummaryView: SAPFiori.FUIChartSummaryView, summaryItemForCategory categoryIndex: Swift.Int) -> SAPFiori.FUIChartSummaryItem?
+}
+@objc @_inheritsConvenienceInitializers public class ChartContent : ObjectiveC.NSObject {
+  public func configureTitleView(chartContent: SAPFiori.FUIChartFloorplanTableViewCell, chartContentData: Swift.Dictionary<Swift.String, Any>)
+  public func configureChartView(chartContent: SAPFiori.FUIChartFloorplanTableViewCell, chartContentData: Swift.Dictionary<Swift.String, Any>)
+  public func configureSelectedItemReadOnly(chartContent: SAPFiori.FUIChartFloorplanTableViewCell, summaryViewData: Foundation.NSDictionary)
+  public func getSelectedItemForSummaryView(_ chartSummaryView: SAPFiori.FUIChartSummaryView, selectedIndex: Swift.Int) -> SAPFiori.FUIChartSummaryItem
+  public func getSelectedItem(selectedIndex: Swift.Int) -> SAPFiori.FUIChartSummaryItem
+  public func configureSummaryView(chartContent: SAPFiori.FUIChartFloorplanTableViewCell, chartContentData: Swift.Dictionary<Swift.String, Any>)
+  public func configureStyles(chartContent: SAPFiori.FUIChartFloorplanTableViewCell, chartContentData: Swift.Dictionary<Swift.String, Any>)
+  public func configureChartContent(_ chartContent: SAPFiori.FUIChartFloorplanTableViewCell, chartContentData: Swift.Dictionary<Swift.String, Any>)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(CrudParams) public class CrudParams : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KPISection : SAPMDC.KPIHeaderSection {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class SimplePropertyBarcodeScanViewController : UIKit.UIViewController, SAPFiori.FUIBarcodeScanViewControllerDelegate {
+  public func create(_ cell: SAPFiori.FUITextFieldFormCell, containerDelegate: UIKit.UITextFieldDelegate, formcellDelegate: SAPMDC.FormCellItemDelegate, indexPath: Foundation.IndexPath)
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  public func barcodeScanViewController(_ barcodeScanViewController: SAPFiori.FUIBarcodeScanViewController, didReceiveScanResult scanResult: SAPFiori.FUIBarcodeScanResult?)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class ImageItemCollectionViewTableViewCell : SAPFiori.FUIBaseCollectionViewTableViewCell {
+  public func setLayout()
+  @objc override dynamic open func layoutSubviews()
+  @objc override dynamic open func layoutMarginsDidChange()
+  @objc override dynamic open func prepareForReuse()
+  @objc override dynamic public init(style: SAPFiori.UITableViewCellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(ActivityIndicatorViewSwift) public class ActivityIndicatorView : ObjectiveC.NSObject {
+  @objc public static func dismiss()
+  @objc public static func show(params: [Swift.String : Any])
+  public static func updateText(params: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(ToastMessageViewSwift) public class ToastMessageView : ObjectiveC.NSObject {
+  @objc public static func displayToastMsg(params: [Swift.String : Any])
+  public static func findIfWindowOrView(window: UIKit.UIWindow?, view: UIKit.UIView?) -> (isWindowProvided: Swift.Bool, isViewProvided: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UITableViewCell.AccessoryType {
+  public init?(fromString: Swift.String)
+}
+extension NSTextAlignment {
+  public init?(fromString: Swift.String)
+}
+extension NSLineBreakMode {
+  public init?(fromString: Swift.String)
+}
+extension FUIHorizontalAlignment {
+  public init?(fromString: Swift.String)
+}
+extension FUIButton {
+  public var cellParameters: [Swift.String : Any] {
+    get
+    set
+  }
+}
+@_hasMissingDesignatedInitializers public class MDKLanguageObserver : SAPFoundation.SAPURLSessionObserving {
+  public func sapURLSession(_ sapurlsession: SAPFoundation.SAPURLSession, task: SAPFoundation.SAPURLSessionTask, willSend request: Foundation.URLRequest, completionHandler: @escaping (SAPFoundation.SAPURLSession.RequestDisposition) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ReferentialConstraintLink {
+  public func execute() throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class UIViewConstraintHandler {
+  public static func applyLeadTrailGuideConstraint(superView: UIKit.UIView, subView: UIKit.UIView, layoutGuide: UIKit.UILayoutGuide)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class StylingHelper : ObjectiveC.NSObject {
+  @objc public static func applySDKTheme(file: Swift.String)
+  @objc public static func applySDKBranding(file: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class KPIHeaderSection : SAPMDC.BaseSection {
+  public var items: [Swift.AnyObject]
+  @objc override public func redraw(data: Foundation.NSDictionary)
+  @objc override public func reloadData(itemCount: Swift.Int)
+  @objc override public func reloadRow(index: Swift.Int)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ODataLinkCreator) public class ODataLinkCreator : SAPMDC.ODataLinker {
+  public func execute(_ sourceEntity: SAPOData.EntityValue, dataService: Any, changeSetManager: SAPMDC.ChangeSetManager, canUseCreateRelatedEntity: Swift.Bool = false) throws -> SAPMDC.ReferentialConstraintLink?
+  public func isTargetCreatedInSameChangeSet() -> Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(ReadParams) public class ReadParams : ObjectiveC.NSObject {
+  public func isTargetCreatedInSameChangeSet() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol ExtensionFormCell {
+  func registerTo(_ tableView: UIKit.UITableView)
+  func dequeueReusableCell(for tableView: UIKit.UITableView, atIndexPath indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+@_hasMissingDesignatedInitializers @objc(ReadLinkReadParams) public class ReadLinkReadParams : SAPMDC.ReadParams {
+  override public func isTargetCreatedInSameChangeSet() -> Swift.Bool
+  @objc deinit
+}
+@objc public protocol MDKExtension {
+  @objc var delegate: SAPMDC.SwiftExtensionDelegate? { get set }
+  @objc func update(with params: Foundation.NSDictionary)
+  @objc func controlValueChanged(with binding: Foundation.NSDictionary)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ODataCreator) public class ODataCreator : SAPMDC.BaseODataCruder {
+  public func execute(dataService: Any, changeSetManager: Any?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(NavigationBarSwift) public class NavigationBar : ObjectiveC.NSObject {
+  @objc public static func applyFioriStyle()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OnboardingController) public class OnboardingController : UIKit.UINavigationController {
+  public static var isURLOnboarding: Swift.Bool
+  public static let kAppOnboardedState: Swift.String
+  public var params: Foundation.NSDictionary?
+  public var callback: SAPMDC.WelcomeScreenDelegate?
+  public var eulaAccepted: Swift.Bool
+  @objc public static let sharedInstance: SAPMDC.OnboardingController
+  @objc public func initialize(_ params: Foundation.NSDictionary, callback: SAPMDC.WelcomeScreenDelegate)
+  final public let presentationDelegate: SAPFioriFlows.ModalUIViewControllerPresenter
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc public func verifyPasscode(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func unlockScreen(resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func restoreOnRelaunch(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func changeUserPasscode(resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func reInitializePage(params: Foundation.NSDictionary)
+  @objc public func manageBlurScreen(params: Foundation.NSDictionary)
+  public func showRetryLimitReachedAlertThenReset(completionHandler: @escaping () -> Swift.Void)
+  @available(iOS 5.0, *)
+  @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public class ListPickerDataSource : ObjectiveC.NSObject, SAPFiori.FUIListPickerDataSource, SAPFiori.FUIListPickerSearchResultsUpdating, UIKit.UISearchBarDelegate {
+  public init(cell: SAPFiori.FUIListPickerFormCell, data: [Foundation.NSDictionary], initiallySelectedData: [Foundation.NSDictionary], delegate: SAPMDC.FormCellItemDelegate, search: SAPMDC.Search)
+  public init(cell: SAPFiori.FUIListPickerFormCell, data: [Foundation.NSDictionary], initiallySelectedIndexes: [Swift.Int], delegate: SAPMDC.FormCellItemDelegate, search: SAPMDC.Search)
+  public func update(data: [Foundation.NSDictionary])
+  public func hideLazyLoadingIndicator()
+  public func updateSelectedData(uuidValues: [Swift.String])
+  @objc public func numberOfRows(in listPickerTableView: UIKit.UITableView) -> Swift.Int
+  @objc public func listPickerTableView(_ tableView: UIKit.UITableView, cellForRowAt index: Swift.Int, isFiltered: Swift.Bool) -> UIKit.UITableViewCell
+  @objc public func listPickerTableView(_ tableView: UIKit.UITableView, cellForItemWithUniqueIdentifier uniqueIdentifier: Swift.String) -> UIKit.UITableViewCell
+  @objc public func listPickerTableView(_ tableView: UIKit.UITableView, uniqueIdentifierForItemAt index: Swift.Int) -> Swift.String
+  @objc public func listPickerTableView(_ tableView: UIKit.UITableView, indexForUniqueIdentifier uniqueIdentifier: Swift.String) -> Swift.Int
+  @objc public func listPicker(_ listPicker: SAPFiori.FUIListPicker, updateSearchResults forSearchString: Swift.String)
+  @objc public func callSearchCallback(sender: Foundation.Timer)
+  @objc public func searchBarSearchButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @objc public func listPicker(_ listPicker: SAPFiori.FUIListPicker, filteredDataSourceContainsItemWithUniqueIdentifier uniqueIdentifier: Swift.String) -> Swift.Bool
+  public func descriptionForSelectedItems(at values: [Foundation.NSDictionary]) -> Swift.String
+  public func descriptionForSelectedIndexes(at indexes: [Swift.Int]) -> Swift.String
+  @objc public func listPicker(_ listPicker: SAPFiori.FUIListPicker, filteredDataSourceContainsItemAt unfilteredIndex: Swift.Int) -> Swift.Bool
+  @objc public func listPicker(_ listPicker: SAPFiori.FUIListPicker, unfilteredDataSourceIndexOfItemAt filteredIndex: Swift.Int) -> Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc(SwiftExtensionDelegateImpl) public class SwiftExtensionDelegateImpl : ObjectiveC.NSObject, SAPMDC.SwiftExtensionDelegate {
+  weak public var delegate: ObjectiveC.NSObject?
+  @objc public var actionOrRuleCallback: ((Swift.String) -> Swift.Void)?
+  @objc public var resolveValueCallback: ((Swift.String) -> Swift.Void)?
+  @objc public init(with nativeScriptDelegate: ObjectiveC.NSObject?)
+  @objc public func setControlValue(value: Foundation.NSString)
+  @objc public func executeActionOrRule(definitionPath: Foundation.NSString, callback: @escaping (Swift.String) -> Swift.Void)
+  @objc public func resolveValue(value: Foundation.NSString, callback: @escaping (Swift.String) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol ExtensionTableViewCellHandler {
+  @objc func getReuseIdentifier() -> Swift.String
+  @objc func registerCellTo(_ tableView: UIKit.UITableView)
+  @objc func configureReusableCell(_ tableViewCell: UIKit.UITableViewCell)
+}
+@objc public enum SBSecureStoreError : Swift.Int, Swift.Error {
+  case KeyNotFound
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class SecureStoreManager : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: SAPMDC.SecureStoreManager
+  public func put(_ value: Swift.String, forKey key: Swift.String) throws
+  public func getStringValue(_ forKey: Swift.String) throws -> Swift.String?
+  @objc public func putString(value: Swift.String, key: Swift.String) throws
+  @objc public func getString(key: Swift.String) throws -> Swift.String
+  @objc public func remove(key: Swift.String) throws
+  @objc public func removeStore()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ConnectionInfoToast {
+  public static func showToast(parent: Any)
+  @objc deinit
+}
+public enum NetworkCheckStepError : Swift.Error {
+  case networkUnreachable
+  public static func == (a: SAPMDC.NetworkCheckStepError, b: SAPMDC.NetworkCheckStepError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension NetworkCheckStepError : SAPCommon.SAPError {
+  public static var networkErrorString: Swift.String?
+  public var debugDescription: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var failureReason: Swift.String? {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(MissingExtensionPlaceholder) public class MissingExtensionPlaceholder : UIKit.UIViewController, SAPMDC.MDKExtension {
+  @objc public var delegate: SAPMDC.SwiftExtensionDelegate?
+  @objc public func controlValueChanged(with value: Foundation.NSDictionary)
+  @objc public func update(with params: Foundation.NSDictionary)
+  @objc public var className: Swift.String
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TextHandler {
+  public static func heightOfHeaderText(text: Swift.String, tableView: UIKit.UITableView) -> CoreGraphics.CGFloat
+  public static func displayableTextString(text: Swift.String) -> Swift.String
+  @objc deinit
+}
+public protocol AttachmentFormViewChangeDelegate : AnyObject {
+  func didChangeValue(for name: Swift.String!, with data: [Swift.String : Any])
+  func reloadSectionContainer(at indexPath: Foundation.IndexPath)
+}
+@_hasMissingDesignatedInitializers public class AttachmentFormViewDelegate : SAPFiori.FUIAttachmentsViewControllerDataSource, SAPFiori.FUIAttachmentsViewControllerDelegate, SAPFiori.FUIAddPhotoAttachmentActionDelegate, SAPFiori.FUITakePhotoAttachmentActionDelegate, SAPFiori.FUIDocumentPickerAttachmentActionDelegate {
+  public func attachmentsViewController(_ attachmentsViewController: SAPFiori.FUIAttachmentsViewController, iconForAttachmentAtIndex index: Swift.Int) -> (image: UIKit.UIImage, contentMode: UIKit.UIView.ContentMode)?
+  public func attachmentsViewController(_ attachmentsViewController: SAPFiori.FUIAttachmentsViewController, urlForAttachmentAtIndex index: Swift.Int) -> Foundation.URL?
+  public func numberOfAttachments(in attachmentsViewController: SAPFiori.FUIAttachmentsViewController) -> Swift.Int
+  public func attachmentsViewController(_ attachmentsViewController: SAPFiori.FUIAttachmentsViewController, didPressDeleteAtIndex index: Swift.Int)
+  public func attachmentsViewController(_ attachmentsViewController: SAPFiori.FUIAttachmentsViewController, couldNotPresentAttachmentAtIndex index: Swift.Int)
+  public func addPhotoAttachmentAction(_ action: SAPFiori.FUIAddPhotoAttachmentAction, didSelectPhoto asset: Photos.PHAsset, at url: Foundation.URL)
+  public func addPhotoAttachmentAction(_ action: SAPFiori.FUIAddPhotoAttachmentAction, didSelectPhotoAt photoUrl: Foundation.URL)
+  public func takePhotoAttachmentAction(_ action: SAPFiori.FUITakePhotoAttachmentAction, didTakePhoto asset: Photos.PHAsset, at url: Foundation.URL)
+  public func takePhotoAttachmentAction(_ action: SAPFiori.FUITakePhotoAttachmentAction, didTakePhoto image: UIKit.UIImage)
+  public func addAttachmentEntry(attachmentEntry: Foundation.NSDictionary)
+  public var documentPicker: UIKit.UIDocumentPickerViewController {
+    get
+  }
+  public func documentPickerAttachmentAction(_ action: SAPFiori.FUIDocumentPickerAttachmentAction, didPickFileAt url: Foundation.URL)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ChangeSetManager {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(BaseODataCruder) public class BaseODataCruder : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(SectionedTableViewController) public class SectionedTableViewController : SAPFiori.FUIFormTableViewController, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate, UIKit.UISearchResultsUpdating, UIKit.UISearchBarDelegate, MessageUI.MFMessageComposeViewControllerDelegate, MessageUI.MFMailComposeViewControllerDelegate, SAPFiori.FUIActivityControlDelegate, UIKit.UIPopoverPresentationControllerDelegate {
+  @objc public var tableViewForExtension: UIKit.UITableView?
+  @objc public var tableViewCellForExtension: UIKit.UITableViewCell?
+  @objc public var isInEmbeddedFrame: Swift.Bool
+  @objc public func initialize(_ sections: Foundation.NSArray)
+  @objc public func redraw(_ sections: Foundation.NSArray)
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc override dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc override dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didDeselectRowAt indexPath: Foundation.IndexPath)
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, accessoryButtonTappedForRowWith indexPath: Foundation.IndexPath)
+  @objc public static func analyticViewTap(sender: SAPMDC.AnalyticViewTapGestureRecogniser)
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, canEditRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, viewForFooterInSection sectionIndex: Swift.Int) -> UIKit.UIView?
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: Foundation.IndexPath) -> UIKit.UISwipeActionsConfiguration?
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: Foundation.IndexPath) -> UIKit.UISwipeActionsConfiguration?
+  @objc public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @objc public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @objc public func updateSearchResults(for searchController: UIKit.UISearchController)
+  @objc public func callSearchCallback(sender: Foundation.Timer)
+  @objc public func searchBarSearchButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @objc public func searchBarTextDidBeginEditing(_ searchBar: UIKit.UISearchBar)
+  @objc public func searchBarTextDidEndEditing(_ searchBar: UIKit.UISearchBar)
+  @objc public func setSearchString(_ searchString: Swift.String) -> Swift.Bool
+  @objc override dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGFloat
+  public func reloadSection(section: SAPMDC.BaseSection)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  public func call(phoneNumber: Swift.String, callType: Swift.String)
+  public func addProgressIndicatorPress(cell: UIKit.UITableViewCell)
+  public func enableLoadMoreItemsFinished()
+  public func removeLazyLoadingIndicator()
+  public func reloadObjectCollectionData()
+  public func hideLazyLoadingIndicator()
+  public func sendSMSText(phoneNumber: Swift.String)
+  @objc public func messageComposeViewController(_ controller: MessageUI.MFMessageComposeViewController, didFinishWith result: MessageUI.MessageComposeResult)
+  public func sendEmail(emailRecipient: Swift.String)
+  @objc public func mailComposeController(_ controller: MessageUI.MFMailComposeViewController, didFinishWith result: MessageUI.MFMailComposeResult, error: Swift.Error?)
+  public func showAlert(title: Swift.String, message: Swift.String)
+  public func activityControl(_ activityControl: SAPFiori.FUIActivityControl, didSelectActivity activityItem: SAPFiori.FUIActivityItem)
+  public func setActivityControl(activityItemParams: [Swift.Dictionary<Swift.String, Swift.String>], maxActivityCount: Swift.Int) -> [SAPFiori.FUIActivityItem]
+  public func setActivitiesHandler(activityItem: SAPFiori.FUIActivityItem)
+  @objc public func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+  public func toggleOnSectionSelectionMode(section: SAPMDC.BaseTableSection)
+  public func toggleOffSectionSelectionMode(section: SAPMDC.BaseTableSection)
+  @objc override dynamic public init(style: UIKit.UITableView.Style)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(ODataLinker) public class ODataLinker : ObjectiveC.NSObject {
+  public func execute(_ sourceEntity: SAPOData.EntityValue, dataService: Any, changeSetManager: SAPMDC.ChangeSetManager) throws
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum SectionFooterStyle {
+  case attribute, help, title
+  public static func == (a: SAPMDC.SectionFooterStyle, b: SAPMDC.SectionFooterStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers public class BaseSection : ObjectiveC.NSObject {
+  @objc public func redraw(data: Foundation.NSDictionary)
+  @objc public func reloadRow(index: Swift.Int)
+  @objc public func updateRow(index: Swift.Int, data: Foundation.NSDictionary)
+  @objc public func reloadData(itemCount: Swift.Int)
+  @objc public func hideLazyLoadingIndicator()
+  @objc public func refreshIndicators()
+  @objc public func setIndicatorState(params: Foundation.NSDictionary)
+  @objc public func setFormCellSectionItem(params: [Swift.String : Any], delegate: SAPMDC.FormCellItemDelegate)
+  @objc public func updateFormCell(params: [Swift.String : Any], row: Swift.Int)
+  @objc public func updateFormCells(params: Foundation.NSArray)
+  public func setSectionIndex(section: Swift.Int)
+  public func isSectionEmpty() -> Swift.Bool
+  public func usesEmptySectionRow() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum SelectionMode : Swift.String {
+  case none
+  case multiple
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseTableSection : SAPMDC.BaseSection {
+  public var longPressToEnable: SAPMDC.SelectionMode?
+  public var exitOnLastDeselect: Swift.Bool
+  public var selectionMode: SAPMDC.SelectionMode?
+  public var selectedRows: [Swift.Int]
+  public var selectionChanged: Swift.Bool
+  public var isRedraw: Swift.Bool
+  public var longPressIndex: Swift.Int?
+  public func isHighlightDoableForSection() -> Swift.Bool
+  public static func getSelectionMode(mode: Swift.String) -> SAPMDC.SelectionMode
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class DisplayUtil {
+  public static func getUIUserInterfaceStyle() -> UIKit.UIUserInterfaceStyle
+  @objc deinit
+}
+@objc public protocol SwiftExtensionDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func setControlValue(value: Foundation.NSString)
+  @objc func executeActionOrRule(definitionPath: Foundation.NSString, callback: @escaping (Swift.String) -> Swift.Void)
+  @objc func resolveValue(value: Foundation.NSString, callback: @escaping (Swift.String) -> Swift.Void)
+}
+@_inheritsConvenienceInitializers @objc(ObjectCellSwift) public class ObjectCell : ObjectiveC.NSObject {
+  public static let progressIndicator: Swift.Int
+  @objc public static func create() -> UIKit.UITableViewCell
+  @objc public static func populate(params: Foundation.NSDictionary)
+  public static func configureObjectCell(cell: SAPFiori.FUIObjectTableViewCell, params: Foundation.NSDictionary, sectionParams: Foundation.NSDictionary = [:])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FormCellSection : SAPMDC.BaseSection, SAPMDC.AttachmentFormViewChangeDelegate, UIKit.UITextFieldDelegate {
+  public var delegates: [Swift.String : SAPMDC.FormCellItemDelegate]
+  public var aDelegates: [Foundation.IndexPath : SAPMDC.AttachmentFormViewDelegate]
+  @objc public var tableViewForExtension: UIKit.UITableView?
+  @objc public var tableViewCellForExtension: UIKit.UITableViewCell?
+  @objc override public func redraw(data: Foundation.NSDictionary)
+  @objc override public func setFormCellSectionItem(params: [Swift.String : Any], delegate: SAPMDC.FormCellItemDelegate)
+  @objc override public func updateFormCell(params: [Swift.String : Any], row: Swift.Int)
+  @objc public func hideLazyLoadingIndicatorWith(row: Swift.Int)
+  @objc override public func updateFormCells(params: Foundation.NSArray)
+  public func registerCellsOfFormCellSection(tableView: UIKit.UITableView)
+  public func onPressFormCellCallback(row: Swift.Int, view: UIKit.UIView)
+  public func getView(row: Swift.Int = 0) -> ObjectiveC.NSObject?
+  public func didChangeValue(for name: Swift.String!, with data: [Swift.String : Any])
+  public func reloadSectionContainer(at indexPath: Foundation.IndexPath)
+  public func getCellItems() -> [[Swift.String : Any]]
+  @objc public func setFocus(row: Swift.Int)
+  public func getVisibleCellCount() -> Swift.Int
+  public func getCellParams(row: Swift.Int) -> [Swift.String : Any]
+  public func getExtensionHeight(row: Swift.Int) -> CoreGraphics.CGFloat?
+  public func updateParamsWithValue(_ newValue: Swift.Dictionary<Swift.String, Any>, _ indexPath: Foundation.IndexPath)
+  @objc open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class BannerMessageView : ObjectiveC.NSObject {
+  @objc public static func display(params: [Swift.String : Any], callback: SAPMDC.BannerDelegate)
+  @objc public static func dismissBanner(params: [Swift.String : Any])
+  @objc public static func prepareToRelocate()
+  public static func setSearchBarAnchor(serchBar: SAPFiori.FUISearchBar)
+  @objc public static func relocateTo(navigationController: UIKit.UINavigationController, view: UIKit.UIView? = nil)
+  @objc public static func updateText(params: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Utilities {
+  public static func getCacheSize(paramKey: Swift.String, defaultCacheSize: Swift.Int) -> Swift.Int
+  public static func nonEmptyDataSeries(data: [[Swift.Double]]) -> [[Swift.Double]]?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ImagePathHandler {
+  public static var cache: Foundation.URLCache!
+  public static let BASE64PREFIX: Swift.String
+  public static let PDFPREFIX: Swift.String
+  public static let RESOURCEPREFIX: Swift.String
+  public static let WEBPREFIX: Swift.String
+  public static let WEBPREFIX_SECURE: Swift.String
+  public static var wrongURLs: Swift.Set<Swift.String>
+  public static let TEMPLATEMODE: Swift.String
+  public static let CUSTOMSIZE: Swift.String
+  public static func image(from imageString: Swift.String, renderAsAlwaysTemplate: Swift.Bool? = false, colorFilter: UIKit.UIColor? = nil) -> UIKit.UIImage?
+  public static func imageAsync(from imageString: Swift.String, renderAsAlwaysTemplate: Swift.Bool? = false, colorFilter: UIKit.UIColor? = nil, completionHandler: @escaping (UIKit.UIImage?, Swift.String) -> Swift.Void)
+  public static func updateImageViewContentMode(imageView: UIKit.UIImageView, imageString: Swift.String)
+  public static func setImageCacheSize()
+  public static func resizeImage(originalImage: UIKit.UIImage, newWidth: CoreGraphics.CGFloat, newHeight: CoreGraphics.CGFloat) -> UIKit.UIImage
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AnalyticCardCollectionSection : SAPMDC.BaseSection {
+  public var items: [Swift.AnyObject]
+  @objc override public func redraw(data: Foundation.NSDictionary)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VersionObserver : SAPFoundation.SAPURLSessionObserving {
+  public func sapURLSession(_ sapurlsession: SAPFoundation.SAPURLSession, task: SAPFoundation.SAPURLSessionTask, willSend request: Foundation.URLRequest, completionHandler: @escaping (SAPFoundation.SAPURLSession.RequestDisposition) -> Swift.Void)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ODataUpdater) public class ODataUpdater : SAPMDC.BaseODataCruder {
+  public func execute(dataService: Any, changeSetManager: Any?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class BindingLink {
+  public func execute() throws
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SectionFactory : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: SAPMDC.SectionFactory
+  @objc public func createSection(params: Foundation.NSDictionary, callback: SAPMDC.SectionDelegate) -> SAPMDC.BaseSection?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(ODataLinkUpdater) public class ODataLinkUpdater : SAPMDC.ODataLinkCreator {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PopoverSwift) public class Popover : ObjectiveC.NSObject, UIKit.UIPopoverPresentationControllerDelegate {
+  @objc public static let sharedInstance: SAPMDC.Popover
+  @objc public func show(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: (Swift.String?, Swift.String?, Swift.Error?) -> Swift.Void)
+  @objc public func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ObjectHeader : ObjectiveC.NSObject {
+  public static func setObjectHeader(_ objectHeader: SAPFiori.FUIObjectHeader, withParams params: Swift.Dictionary<Swift.String, Any>, styleParams: Swift.Dictionary<Swift.String, Any>, objectHeaderSection: SAPMDC.ObjectHeaderSection?)
+  public static func getKPIMetricItemsFromparams(withParams kpiMetricItemsParams: [Swift.Dictionary<Swift.String, Any>]) -> [SAPFiori.FUIKPIViewItem]
+  public static func getKPIView(enableProgressView: Swift.Bool, kpiItems: [SAPFiori.FUIKPIViewItem], kpiCaptionLabel: Swift.String, _ kpiProgress: Swift.Double) -> SAPFiori.FUIKPIContainer
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(CpmsSessionSwift) public class CpmsSession : ObjectiveC.NSObject {
+  @objc public static var sharedInstance: SAPMDC.CpmsSession
+  @objc public func initialize(params: Foundation.NSDictionary)
+  @objc public func update(params: Foundation.NSDictionary)
+  public func sendRequest(params: [Swift.String : Any], success: @escaping (Foundation.HTTPURLResponse, Foundation.Data) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func sendRequest(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func getFormData(boundary: Swift.String, params: Foundation.NSDictionary) -> Foundation.Data
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ExtensionSection : SAPMDC.BaseSection {
+  public static var ExtensionSectionViewTag: Swift.Int {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FormCellType {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FormCellFactory {
+  public static var extensionFormCellReuseID: Swift.String
+  public static var extensionFormCellViewTag: Swift.Int
+  public static var locale: Foundation.Locale
+  public static var SignatureCaptureFormCellReuseID: Swift.String
+  public static func registerFormCell(tableView: UIKit.UITableView, type: Swift.String, formCellController: SAPMDC.FormCellContainerViewController, delegate: SAPMDC.FormCellItemDelegate)
+  public static func registerFormCell(tableView: UIKit.UITableView, type: Swift.String, formCellSection: SAPMDC.FormCellSection, delegate: SAPMDC.FormCellItemDelegate)
+  public static func getFormCell(tableView: UIKit.UITableView, indexPath: Foundation.IndexPath, cellType: Swift.String, cellParams: [Swift.String : Any], formCellController: SAPMDC.FormCellContainerViewController, delegate: SAPMDC.FormCellItemDelegate) -> UIKit.UITableViewCell
+  public static func getFormCell(tableView: UIKit.UITableView, indexPath: Foundation.IndexPath, cellType: Swift.String, cellParams: [Swift.String : Any], formCellSection: SAPMDC.FormCellSection, delegate: SAPMDC.FormCellItemDelegate, viewController: SAPMDC.SectionedTableViewController? = nil) -> UIKit.UITableViewCell
+  public static func notifyFormCellUpdate<Dictionary>(_ delegate: SAPMDC.FormCellItemDelegate, _ params: Dictionary)
+  public static func setTitleFormCellView(for cell: SAPFiori.FUITitleFormCell, with cellParams: [Swift.String : Any])
+  public static func setNoteFormCellView(for cell: SAPFiori.FUINoteFormCell, with cellParams: [Swift.String : Any])
+  public static func adaptNoteFormCellViewLayout(for cell: SAPFiori.FUINoteFormCell, at tableView: UIKit.UITableView, with cellParams: [Swift.String : Any])
+  public static func adaptSignatureFormCellViewLayout(for cell: SAPFiori.FUITextFieldFormCell, at tableView: UIKit.UITableView, with cellParams: [Swift.String : Any])
+  public static func setSignatureCaptureLabel(for cell: SAPFiori.FUITextFieldFormCell, with cellParams: [Swift.String : Any])
+  public static func setSignatureCaptureFormCell(for cell: SAPFiori.FUITextFieldFormCell, with cellParams: [Swift.String : Any])
+  public static func setSimplePropertyFormCellView(for cell: SAPFiori.FUITextFieldFormCell, with cellParams: [Swift.String : Any], textFieldDelegate: UIKit.UITextFieldDelegate, delegate: SAPMDC.FormCellItemDelegate, indexPath: Foundation.IndexPath)
+  public static func configAlternateInputButton(_ cell: SAPFiori.FUITextFieldFormCell, containerDelegate: UIKit.UITextFieldDelegate, delegate: SAPMDC.FormCellItemDelegate, indexPath: Foundation.IndexPath)
+  public static func getKeyboardType(keyboardType: Swift.String) -> UIKit.UIKeyboardType
+  public static func setButtonFormCellView(for cell: SAPFiori.FUIButtonFormCell, with cellParams: [Swift.String : Any])
+  public static func setSwitchFormCellView(for cell: SAPFiori.FUISwitchFormCell, with cellParams: [Swift.String : Any])
+  public static func setDatePickerFormCellView(for cell: SAPFiori.FUIDatePickerFormCell, with cellParams: [Swift.String : Any])
+  public static func setDurationPickerFormCellView(for cell: SAPFiori.FUIDurationPickerFormCell, with cellParams: [Swift.String : Any])
+  public static func setListPickerFormCellView(for cell: SAPFiori.FUIListPickerFormCell, with cellParams: [Swift.String : Any])
+  public static func setListPickerValueByUUID(for cell: SAPFiori.FUIListPickerFormCell, with cellParams: [Swift.String : Any], delegate: SAPMDC.FormCellItemDelegate, search: SAPMDC.Search) -> SAPMDC.ListPickerDataSource?
+  public static func setListPickerValueByArray(for cell: SAPFiori.FUIListPickerFormCell, with cellParams: [Swift.String : Any], delegate: SAPMDC.FormCellItemDelegate, search: SAPMDC.Search)
+  public static func updateListPickerListView(for cell: SAPFiori.FUIListPickerFormCell, with params: [Swift.String : Any])
+  public static func setSegmentedControlFormCellView(for cell: SAPFiori.FUISegmentedControlFormCell, with cellParams: [Swift.String : Any])
+  public static func setAttachmentsFormCellView(for cell: SAPFiori.FUIAttachmentsFormCell, with cellParams: [Swift.String : Any], aDelegate: SAPMDC.AttachmentFormViewDelegate?)
+  public static func setFilterFormCellView(for cell: SAPFiori.FUIFilterFormCell, with cellParams: [Swift.String : Any], sorter: Swift.Bool)
+  public static func setValidationView(for cell: SAPFiori.FUIInlineValidationTableViewCell, with cellParams: [Swift.String : Any])
+  public static func setValidationView(for cell: SAPFiori.FUINoteFormCell, with cellParams: [Swift.String : Any])
+  public static func setValidationView(for cell: SAPFiori.FUITextFieldFormCell, with cellParams: [Swift.String : Any])
+  public static func setValidationView(for cell: SAPFiori.FUISwitchFormCell, with cellParams: [Swift.String : Any])
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ChartContentSection : SAPMDC.BaseSection {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SimplePropertyCollectionSection : SAPMDC.BaseSection {
+  @objc deinit
+}
+@objc(DataProvider) public protocol DataProvider {
+  @objc func download(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func initOfflineStore(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func upload(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func cancelUpload(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func cancelDownload(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func close(params: Foundation.NSDictionary, success: (Swift.AnyObject?) -> Swift.Void, failure: (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func clear(params: Foundation.NSDictionary, success: (Swift.AnyObject?) -> Swift.Void, failure: (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func create(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func open(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func read(entitySet: Swift.String, properties: Foundation.NSArray, queryString: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, pageSize: Foundation.NSNumber?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func createEntity(odataCreator: SAPMDC.ODataCreator, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc func createRelatedEntity(odataCreator: SAPMDC.ODataRelatedCreator, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc func updateEntity(odataUpdater: SAPMDC.ODataUpdater, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc func deleteEntity(odataDeleter: SAPMDC.ODataDeleter, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc func deleteMediaEntity(entitySetName: Swift.String, queryString: Swift.String?, readLink: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc func createMediaEntity(entitySetName: Swift.String, properties: Foundation.NSDictionary, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, media: Foundation.NSArray, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func createMediaEntity1(entitySetName: Swift.String, properties: Foundation.NSDictionary, headers: Foundation.NSDictionary?, media: Foundation.NSArray, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func createRelatedMediaEntity(entitySetName: Swift.String, properties: Foundation.NSDictionary, parent: Foundation.NSDictionary, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, media: Foundation.NSArray, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func downloadMedia(entitySetName: Swift.String, queryString: Swift.String?, readLink: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func isMediaLocal(entitySetName: Swift.String, readLink: Swift.String?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func beginChangeSet(success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func cancelChangeSet(success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func commitChangeSet(success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func count(entitySet: Swift.String, properties: Foundation.NSArray, queryString: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func callFunction(functionName: Swift.String, parameters: Foundation.NSDictionary, headers: Foundation.NSDictionary, options: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func downloadStream(entitySetName: Swift.String, properties: [Swift.String], queryString: Swift.String?, readLink: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func uploadStream(entitySetName: Swift.String, properties: Foundation.NSDictionary, queryString: Swift.String?, readLink: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func getPropertyType(entitySetName: Swift.String, propertyName: Swift.String) -> Swift.String
+  @objc func getVersion() -> Swift.Int
+  @objc func getOfflineStoreStatus() -> Swift.String
+  @objc func undoPendingChanges(entitySetName: Swift.String, queryString: Swift.String?, editLink: Swift.String?) throws -> Any
+  @objc func getOfflineParameter(name: Swift.String) throws -> Any
+  @objc func setOfflineParameter(name: Swift.String, value: Any)
+}
+@_inheritsConvenienceInitializers @objc(DataServiceManager) public class DataServiceManager : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: SAPMDC.DataServiceManager
+  @objc override dynamic public init()
+  @objc public func download(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func initOfflineStore(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func close(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func clear(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func upload(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func cancelUpload(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func cancelDownload(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func create(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func open(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func read(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func createEntity(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func createRelatedEntity(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func update(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func deleteEntity(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func createMedia(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func createRelatedMedia(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func beginChangeSet(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func cancelChangeSet(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func commitChangeSet(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func deleteMedia(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func downloadMedia(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func isMediaLocal(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func count(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func callFunction(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func downloadStream(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func uploadStream(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func base64StringToBinary(params: Swift.String, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc public func getPropertyType(params: Foundation.NSDictionary) -> Swift.String
+  @objc public func getVersion(params: Foundation.NSDictionary) -> Swift.Int
+  @objc public func getOfflineStoreStatus(params: Foundation.NSDictionary) -> Swift.String
+  @objc public func getOfflineParameter(params: Foundation.NSDictionary) -> Any
+  @objc public func setOfflineParameter(params: Foundation.NSDictionary)
+  @objc public func undoPendingChanges(params: Foundation.NSDictionary, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ODataDeleter) public class ODataDeleter : SAPMDC.BaseODataCruder {
+  public func execute(dataService: Any, changeSetManager: Any?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OnboardingCustomizationSwift) final public class OnboardingCustomization : ObjectiveC.NSObject {
+  public static var authenticationFailedMessageString: Swift.String?
+  public static var eulaTitleString: Swift.String?
+  public static var retryButtonString: Swift.String?
+  public static var agreeButtonString: Swift.String?
+  public static var disagreeButtonString: Swift.String?
+  public static var networkUnreachableString: Swift.String?
+  public static var okButtonString: Swift.String?
+  public static var enterCredentialsMessageString: Swift.String?
+  public static var maxAttemptsReachedMessageString: Swift.String?
+  public static var onboardingFailedMessageString: Swift.String?
+  public static var scanButtonString: Swift.String?
+  public static var continueWithSameAppString: Swift.String?
+  public static var scanNewQRCodeString: Swift.String?
+  public static var selectOptionString: Swift.String?
+  public static var userChoiceString: Swift.String?
+  public static var eulaDisagreeAlertMessage: Swift.String?
+  public static var eulaDisagreeAlertQuitString: Swift.String?
+  public static var eulaDisagreeAlertConsentString: Swift.String?
+  @objc public static func update(_ params: Foundation.NSDictionary)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class BarcodeScannerViewController : UIKit.UIViewController, SAPFiori.FUIBarcodeScanViewControllerDelegate {
+  public var params: Foundation.NSDictionary?
+  public var callback: SAPMDC.BarcodeScannerDelegate?
+  public var barcodeScanViewControllerInstance: SAPFiori.FUIBarcodeScanViewController?
+  @objc public static let sharedInstance: SAPMDC.BarcodeScannerViewController
+  @objc public func create(_ params: Foundation.NSDictionary, callback: SAPMDC.BarcodeScannerDelegate)
+  @objc public func check(_ params: Foundation.NSDictionary, callback: SAPMDC.BarcodeScannerDelegate)
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  public func barcodeScanViewController(_ barcodeScanViewController: SAPFiori.FUIBarcodeScanViewController, didReceiveScanResult scanResult: SAPFiori.FUIBarcodeScanResult?)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(ODataServiceProvider) public class ODataServiceProvider : ObjectiveC.NSObject, SAPMDC.DataProvider {
+  public var online: Swift.Bool
+  public static var serviceTimeZoneAbbreviation: Swift.String
+  public static func offlineODataDirectory() -> Swift.String
+  @objc public func open(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func initOfflineStore(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func close(params: Foundation.NSDictionary, success: (Swift.AnyObject?) -> Swift.Void, failure: (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func clear(params: Foundation.NSDictionary, success: (Swift.AnyObject?) -> Swift.Void, failure: (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  public static func clear(at url: Foundation.URL?, withName name: Swift.String?, success: (Swift.AnyObject?) -> Swift.Void, failure: (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func upload(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func download(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func cancelUpload(params: Foundation.NSDictionary, success: (Swift.AnyObject?) -> Swift.Void, failure: (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func cancelDownload(params: Foundation.NSDictionary, success: (Swift.AnyObject?) -> Swift.Void, failure: (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func downloadMedia(entitySetName: Swift.String, queryString: Swift.String?, readLink: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func isMediaLocal(entitySetName: Swift.String, readLink: Swift.String?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func create(params: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func read(entitySet entity: Swift.String, properties: Foundation.NSArray, queryString: Swift.String? = nil, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, pageSize: Foundation.NSNumber? = nil, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func createEntity(odataCreator: SAPMDC.ODataCreator, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc public func createRelatedEntity(odataCreator: SAPMDC.ODataRelatedCreator, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc public func updateEntity(odataUpdater: SAPMDC.ODataUpdater, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc public func deleteEntity(odataDeleter: SAPMDC.ODataDeleter, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc public func deleteMediaEntity(entitySetName: Swift.String, queryString: Swift.String?, readLink: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void) throws
+  @objc public func undoPendingChanges(entitySetName: Swift.String, queryString: Swift.String?, editLink: Swift.String?) throws -> Any
+  @objc public func downloadStream(entitySetName: Swift.String, properties: [Swift.String], queryString: Swift.String?, readLink: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func uploadStream(entitySetName: Swift.String, properties: Foundation.NSDictionary, queryString: Swift.String?, readLink: Swift.String?, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func createMediaEntity(entitySetName: Swift.String, properties: Foundation.NSDictionary, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, media: Foundation.NSArray, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func createMediaEntity1(entitySetName: Swift.String, properties: Foundation.NSDictionary, headers: Foundation.NSDictionary?, media: Foundation.NSArray, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func createRelatedMediaEntity(entitySetName: Swift.String, properties: Foundation.NSDictionary, parent: Foundation.NSDictionary, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, media: Foundation.NSArray, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func beginChangeSet(success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func cancelChangeSet(success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func commitChangeSet(success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func count(entitySet entity: Swift.String, properties: Foundation.NSArray, queryString: Swift.String? = nil, headers: Foundation.NSDictionary?, options: Foundation.NSDictionary?, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func callFunction(functionName: Swift.String, parameters: Foundation.NSDictionary, headers: Foundation.NSDictionary, options: Foundation.NSDictionary, success: @escaping (Swift.AnyObject?) -> Swift.Void, failure: @escaping (Swift.String?, Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc public func getOfflineStoreStatus() -> Swift.String
+  @objc public func getOfflineParameter(name: Swift.String) throws -> Any
+  @objc public func setOfflineParameter(name: Swift.String, value: Any)
+  @objc public func getPropertyType(entitySetName: Swift.String, propertyName: Swift.String) -> Swift.String
+  @objc public func getVersion() -> Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class AnalyticViewTapGestureRecogniser : UIKit.UITapGestureRecognizer {
+  public var objectHeaderSection: SAPMDC.ObjectHeaderSection?
+  @objc override dynamic public init(target: Any?, action: ObjectiveC.Selector?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OpenDocumentSwift) public class OpenDocument : ObjectiveC.NSObject {
+  public static var cache: Foundation.URLCache!
+  @objc public static func open(path: Swift.String, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  public static func openDocument(path: Swift.String, resolve: @escaping SAPMDC.SnowblindPromiseResolveBlock, reject: @escaping SAPMDC.SnowblindPromiseRejectBlock)
+  public static func downloadDocument(path: Swift.String, completion: @escaping (Swift.Bool, Foundation.URL?) -> Swift.Void)
+  public static func setDocumentCacheSize()
+  public static func removeCachedFile(destinationURL: Foundation.URL)
+  @objc public static func clearCache()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class PreviewController : UIKit.UIViewController, QuickLook.QLPreviewControllerDataSource, QuickLook.QLPreviewControllerDelegate {
+  @objc dynamic public init()
+  public func setPath(path: Swift.String)
+  @objc public func numberOfPreviewItems(in controller: QuickLook.QLPreviewController) -> Swift.Int
+  @objc public func previewController(_ controller: QuickLook.QLPreviewController, previewItemAt index: Swift.Int) -> QuickLook.QLPreviewItem
+  @objc public func previewControllerDidDismiss(_ controller: QuickLook.QLPreviewController)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension SAPMDC.WelcomeScreenError : Swift.Equatable {}
+extension SAPMDC.WelcomeScreenError : Swift.Hashable {}
+extension SAPMDC.SBSecureStoreError : Swift.Equatable {}
+extension SAPMDC.SBSecureStoreError : Swift.Hashable {}
+extension SAPMDC.SBSecureStoreError : Swift.RawRepresentable {}
+extension SAPMDC.NetworkCheckStepError : Swift.Equatable {}
+extension SAPMDC.NetworkCheckStepError : Swift.Hashable {}
+extension SAPMDC.SectionFooterStyle : Swift.Equatable {}
+extension SAPMDC.SectionFooterStyle : Swift.Hashable {}
+extension SAPMDC.SelectionMode : Swift.Equatable {}
+extension SAPMDC.SelectionMode : Swift.Hashable {}
+extension SAPMDC.SelectionMode : Swift.RawRepresentable {}

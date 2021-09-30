@@ -1,0 +1,15 @@
+{
+  "name": "mdk-sap-passport",
+  "version": "1.0.0",
+  "description": "SAP Passport related",
+  "main": "Passport.js",
+   "nativescript": {
+      "platforms": {
+         "ios": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP"
+}

@@ -1,0 +1,8 @@
+"NSFaceIDUsageDescription" = "MDK ondersteunt Face ID-verificatie op ondersteunde apparaten";
+
+"NSCameraUsageDescription" = "Cameragebruik toestaan";
+
+"NSPhotoLibraryAddUsageDescription" = "Onze applicatie heeft toestemming nodig om foto's vast te leggen";
+
+"NSPhotoLibraryUsageDescription" = "Toegang tot fotobibliotheek toestaan";
+

@@ -1,0 +1,42 @@
+import { BaseJSONDefinition } from '../BaseJSONDefinition';
+export declare class BaseControlDefinition extends BaseJSONDefinition {
+    static type: {
+        BottomNavigation: string;
+        Extension: string;
+        FormCellAttachment: string;
+        FormCellButton: string;
+        FormCellContainer: string;
+        FormCellDatePicker: string;
+        FormCellDurationPicker: string;
+        FormCellExtension: string;
+        FormCellFilter: string;
+        FormCellListPicker: string;
+        FormCellNote: string;
+        FormCellSegmentedControl: string;
+        FormCellSignatureCapture: string;
+        FormCellSimpleProperty: string;
+        FormCellSorter: string;
+        FormCellSwitch: string;
+        FormCellTitle: string;
+        ListPickerFragmentContainer: string;
+        SectionedTable: string;
+        SignatureCaptureFragmentContainer: string;
+        TabItem: string;
+        Tabs: string;
+        ToolbarItem: string;
+        SideDrawer: string;
+        FlexibleColumnLayout: string;
+    };
+    private parent;
+    constructor(path: any, data: any, parent: any);
+    readonly type: string;
+    getPage(): BaseControlDefinition;
+    getType(): string;
+    getValue(): any;
+    getOnValueChange(): any;
+    readonly search: any;
+    readonly dataSubscriptions: Array<any>;
+    getIsEditable(): any;
+    isKeyBindable(key: string): boolean;
+    private readonly unbindableKeys;
+}

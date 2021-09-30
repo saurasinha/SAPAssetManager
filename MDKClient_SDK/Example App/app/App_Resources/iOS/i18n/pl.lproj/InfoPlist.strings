@@ -1,0 +1,8 @@
+"NSFaceIDUsageDescriptionKey" = "MDK obsługuje uwierzytelnianie na podstawie wyglądu twarzy na obsługiwanych urządzeniach.";
+
+"NSCameraUsageDescriptionKey" = "Zezwól na użycie kamery";
+
+"NSPhotoLibraryAddUsageDescriptionKey" = "Nasza aplikacja potrzebuje zgody na zapis zdjęć";
+
+"NSPhotoLibraryUsageDescription" = "Zezwól na dostęp do biblioteki zdjęć";
+

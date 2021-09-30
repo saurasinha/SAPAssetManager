@@ -1,0 +1,5 @@
+{
+    "name": "wrap-layout",
+    "main": "wrap-layout.js",
+    "typings": "index.d.ts"
+}

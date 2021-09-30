@@ -1,0 +1,38 @@
+<h1 id="mdk-client-sdk">MDK client SDK</h1>
+<h2 id="getting-started">Getting Started</h2>
+<p>To install the prerequisites for the MDK and build a MDK project, you may run MDK Dependencies installer to install required components.</p>
+<h3 id="for-macos">For MacOS:</h3>
+<p>At the root of the extracted MDK SDK folder, double click on the file &quot;MDK Dependencies Installer&quot; to start the installer. The installer will list all required components for iOS and Android platform and automatically check if they are already installed in the machine. Follow the installer UI to install the components you selected.</p>
+<h3 id="for-windows">For Windows:</h3>
+<p>At the root of the extracted MDK SDK folder, extract &quot;MDKDependenciesInstallerWindows.zip&quot; file, by default a new folder &quot;MDK Dependencies Installer-win32-ia32&quot; will be created. Enter the new folder and double click &quot;MDK_Dependencies_Installer.exe&quot; to start installer. The installer will list all required components for Windows platform and automatically check if they are already installed in the machine. Follow the installer UI to install the components you selected.</p>
+<p>Once you&#39;ve installed these prerequisites, your machine is ready to generate and build a MDK project.</p>
+<h2 id="installing-the-sdk-dependencies">Installing the SDK dependencies</h2>
+<p>To use the SDK to generate a mobile development kit client, the first step is to install some dependencies. To do this, invoke <code>install.command</code> for Mac OS X / <code>install.cmd</code> for Windows, either from Terminal or from Finder. If you select the command from Finder, you may see the following message:</p>
+<blockquote>
+<p>“install.command” can’t be opened because it is from an unidentified developer. </p>
+</blockquote>
+<blockquote>
+<p>Your security preferences allow installation of only apps from the App Store and identified developers.&quot;</p>
+</blockquote>
+<p>To get around this, navigate to the Security &amp; Privacy section of System Preferences. This can be found using Spotlight. Near the bottom of this dialog, click the &quot;Open Anyway&quot; button on the right side. Then select Open from the next prompt.</p>
+<p>A terminal window will appear installs the SDK dependencies using NPM. Once this completes, close the window. Notice that the <code>create-client.command</code> for Mac OS X / <code>create-client.cmd</code> for Windows file has appeared in the SDK directory.</p>
+<h2 id="creating-a-mobile-development-kit-client">Creating a mobile development kit client</h2>
+<p>You can create a client by running <code>create-client.command</code>for Mac OS X / <code>create-client.cmd</code> for Windows and providing the path to a valid <code>.mdkproject</code> directory. Use the included <code>template.mdkproject</code> as a starting point. First, modify the <code>MDKProject.json</code> file to specify build-time configurations such as the app name and version. Next, modify the <code>BrandedSettings.json</code> file to specify settings pertaining to how the application connects to SAP Mobile Services, its passcode policy, and more.</p>
+<p>There are also several directories in the <code>.mdkproject</code> that can be configured, but these are all optional. See <a href="./docs/branding/Branding.md">Branding.md</a> for more information.</p>
+<p>Once the <code>.mdkproject</code> is configured, run <code>create-client.command</code> for Mac OS X / <code>create-client.cmd</code> for Windows to create the client. You will be asked to provide the path to the <code>.mdkproject</code> file and whether you&#39;d like to build for simulator or device. You can also provide optional arguments such as output directory and log verbosity. You can run <code>create-client.command --help</code> for Mac OS X / <code>create-client.cmd --help</code> for Windows from Terminal to find out how to specify these options as arguments.</p>
+<h2 id="running-from-command-line">Running from command line</h2>
+<p>Once the script completes successfully, you can use build and run the app using one of the commands below. First, enter the newly created project directly with the command <code>cd &lt;app name&gt;</code>.</p>
+<h3 id="running-on-the-ios-simulator">Running on the iOS Simulator</h3>
+<p>To run the app on the iOS Simulator from command line, use the command <code>tns run ios --emulator</code>. This command will open the Simulator app, install the app, and start it.</p>
+<h3 id="running-on-an-ios-device">Running on an iOS device</h3>
+<p>To run the app on a device, first attach the device to your Mac. Then run <code>tns device ios</code> to print a list of attached devices. Copy the &quot;Device Identifier&quot; value for your device. Then run the command <code>tns run ios --device &lt;device identifier&gt;</code>.</p>
+<p>You can also run the app in Xcode. Open the project in Xcode with the command <code>open platforms/ios/&lt;app name&gt;.xcworkspace</code>, or open the workspace using the File -&gt; Open... dialog in Xcode. Configure the application&#39;s code signing settings, then run the application for the target device.</p>
+<h3 id="running-on-the-android-emulator">Running on the Android Emulator</h3>
+<p>To run the app on the Android Emulator from command line, use the command <code>tns run android --emulator</code>. This command will open the Emulator app, install the app, and start it.</p>
+<h3 id="running-on-an-android-device">Running on an Android device</h3>
+<p>To run the app on a device, first attach the device to your Mac. Then run <code>tns device android</code> to print a list of attached devices. Copy the &quot;Device Identifier&quot; value for your device. Then run the command <code>tns run android --device &lt;device identifier&gt;</code>.</p>
+<h2 id="building-for-distribution">Building for distribution</h2>
+<h3 id="building-the-ios-application-for-distribution">Building the iOS application for distribution</h3>
+<p>To build an IPA for an iOS device, use <code>tns build ios --for-device --release</code>. This can also be accomplished in Xcode by opening the workspace and selecting the Archive option. More information about archiving can be found in Apple&#39;s documentation <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/UploadingYourApptoiTunesConnect/UploadingYourApptoiTunesConnect.html">here</a>.</p>
+<h3 id="building-the-android-application-for-distribution">Building the Android application for distribution</h3>
+<p>To build an APK for an Android device, use <code>tns build android --release</code>. More information about archiving can be found in NativeScript&#39;s documentation <a href="https://v6.docs.nativescript.org/tooling/docs-cli/project/testing/build-android">here</a>.</p>

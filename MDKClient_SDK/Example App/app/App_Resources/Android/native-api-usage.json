@@ -1,0 +1,9 @@
+{
+	"whitelist": [
+	],
+	"blacklist": [
+		"androidx.core.view:ViewKt*",
+		"androidx.core.os:HandlerKt*",
+		"androidx.core.widget:TextViewKt*"
+	]
+}

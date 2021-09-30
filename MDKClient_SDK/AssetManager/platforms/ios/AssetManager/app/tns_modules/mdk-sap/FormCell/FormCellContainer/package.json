@@ -1,0 +1,16 @@
+{
+  "name": "mdk-sap-formcellcontainer",
+  "version": "1.0.0",
+  "description": "Interact with the form cell container native code.",
+  "main": "FormCellContainerManager.js",
+   "nativescript": {
+      "platforms": {
+         "ios": "1.0.0",
+         "android": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP"
+}

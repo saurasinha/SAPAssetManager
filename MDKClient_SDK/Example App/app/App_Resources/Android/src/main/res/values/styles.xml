@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- theme to use FOR launch screen-->
+    <style name="LaunchScreenThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/ns_primary</item>
+        <item name="colorPrimaryDark">@color/ns_primaryDark</item>
+        <item name="colorAccent">@color/ns_accent</item>
+
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        
+        <item name="android:windowActionBarOverlay">true</item>  
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+
+    <style name="LaunchScreenTheme" parent="LaunchScreenThemeBase">
+    </style>
+
+    <style name="MDKAppTheme" parent="FioriTheme">
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="android:statusBarColor">@color/sap_ui_page_footer_background</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="searchViewStyle">@style/MDKSearchViewStyle</item>
+        <item name="toolbarStyle">@style/MDKActionbarStyle</item>
+        <item name="actionBarStyle">@style/MDKActionbarStyle</item>
+        <!-- Example on how to override a Fiori style
+        <item name="objectCellStyle">@style/MDKObjectCell</item>
+        -->
+    </style>
+    <style name="MDKSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchHintIcon">@null</item>
+    </style>
+    <style name="MDKActionbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/MDKAppBarColor</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="android:paddingRight">@dimen/design_app_bar_right_padding</item>
+        <item name="contentInsetStart">0dp</item>
+        <!-- Remove contentInsetStart, we control left spacing via setTitleMargin in MDKPage -->
+        <!-- Also, by default styling, "android:paddingLeft/Right" is 0dp on phone, 8dp on tablet" -->
+    </style>
+    <style name="Dialog.Mobile" parent="FioriTheme.Dialog">
+        <item name="android:windowBackground">@color/sap_ui_background_color</item>
+    </style>
+
+    <!-- Example on how to override a Fiori style
+    <style name="OnboardingLogo">
+        <item name="android:src">@drawable/sap_logo</item>
+    </style>
+    <style name="MDKObjectCellText" parent="TextAppearance.Fiori.ObjectCell.Description">
+        <item name="android:textColor">@color/ns_accent</item>
+    </style>
+
+    <style name="MDKObjectCellHeadline" parent="TextAppearance.Fiori.ObjectCell.Headline">
+        <item name="android:textColor">@color/ns_accent</item>
+    </style>
+
+    <style name="MDKObjectCell" parent="ObjectCell">
+        <item name="descriptionTextAppearance">@style/MDKObjectCellText</item>
+        <item name="headlineTextAppearance">@style/MDKObjectCellHeadline</item>>
+    </style>
+    -->
+</resources> 

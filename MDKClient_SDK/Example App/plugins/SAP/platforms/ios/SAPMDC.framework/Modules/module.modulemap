@@ -1,0 +1,11 @@
+framework module SAPMDC {
+  umbrella header "SAPMDC.h"
+
+  export *
+  module * { export * }
+}
+
+module SAPMDC.Swift {
+    header "SAPMDC-Swift.h"
+    requires objc
+}

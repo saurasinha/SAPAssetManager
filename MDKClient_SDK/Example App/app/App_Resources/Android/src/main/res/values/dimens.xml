@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="design_snackbar_background_corner_radius">4dp</dimen>
+  <dimen name="design_snackbar_padding_vertical">14dp</dimen>
+  <dimen name="design_snackbar_padding_vertical_2lines">20dp</dimen>
+  <dimen name="design_app_bar_right_padding">8dp</dimen>
+</resources>

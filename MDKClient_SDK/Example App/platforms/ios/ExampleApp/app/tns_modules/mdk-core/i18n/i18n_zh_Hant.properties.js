@@ -1,0 +1,1 @@
+module.exports = "restoring_app=正在載入...\ninitializing_odata=正在初始化離線資料\nqr_code_message_success=已成功載入新連線設定。\nqr_code_message_fail=無法載入新連線設定。\nunable_to_load_new_connection_setttings=無法載入新連線設定。請先登出/重設再載入新連線設定。\noverride_configuration_settings=已自覆蓋組態檔案成功載入新連線設定。\nupdate_fail_roll_back=應用程式更新失敗，將復原至先前的後資料定義\\n原因：\nclose_drawer=關閉隱藏式選單\ndismiss=關閉\nback=返回";

@@ -1,0 +1,16 @@
+println '-------------------------BUILDSCRIPT.GRADLE---------------------------------'
+
+def sap_maven_url = System.getenv('SAP_MAVEN_URL')
+
+repositories {
+  if (sap_maven_url && sap_maven_url.trim()) {
+    maven { url sap_maven_url }
+  } else {
+    google()
+    jcenter()
+  }
+}
+
+dependencies {
+  classpath 'com.google.gms:google-services:4.3.3'
+}

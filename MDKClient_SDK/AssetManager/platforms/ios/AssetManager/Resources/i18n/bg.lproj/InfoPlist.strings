@@ -1,0 +1,7 @@
+"NSFaceIDUsageDescriptionKey" = "MDK поддържа удостоверяване с Face ID на устройства, където е налично";
+
+"NSCameraUsageDescriptionKey" = "Разрешение за използване на камерата";
+
+"NSPhotoLibraryAddUsageDescriptionKey" = "Нашето приложение се нуждае от разрешение да записва снимки";
+
+"NSPhotoLibraryUsageDescription" = "Разрешаване на достъп до библиотеката със снимки";

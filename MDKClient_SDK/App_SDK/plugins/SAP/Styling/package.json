@@ -1,0 +1,16 @@
+{
+  "name": "mdk-sap-styling",
+  "version": "1.0.0",
+  "description": "Applies SDK theming.",
+  "main": "StylingManager.js",
+   "nativescript": {
+      "platforms": {
+         "ios": "1.0.0",
+         "android": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP"
+}

@@ -1,0 +1,44 @@
+framework module SAPFoundation {
+
+    umbrella header "SAPFoundation.h"
+
+    header "sqlite3.h"
+    header "FMDatabase.h"
+    header "FMDatabasePool.h"
+    header "FMResultSet.h"
+    header "FMResultSet.h"
+    header "OpenSSLHelperProxy.h"
+    header "ObjcExceptionHelper.h"
+    
+    /*CrashReporting Headers*/
+    header "CrashReporter.h"
+    header "PLCrashNamespace.h"
+    header "PLCrashReporter.h"
+    header "PLCrashReport.h"
+    header "PLCrashReportTextFormatter.h"
+    header "PLCrashReporterConfig.h"
+    header "PLCrashMacros.h"
+    header "PLCrashReportApplicationInfo.h"
+    header "PLCrashReportBinaryImageInfo.h"
+    header "PLCrashReportExceptionInfo.h"
+    header "PLCrashReportMachineInfo.h"
+    header "PLCrashReportMachExceptionInfo.h"
+    header "PLCrashReportProcessInfo.h"
+    header "PLCrashReportProcessorInfo.h"
+    header "PLCrashReportRegisterInfo.h"
+    header "PLCrashReportSignalInfo.h"
+    header "PLCrashReportStackFrameInfo.h"
+    header "PLCrashReportSymbolInfo.h"
+    header "PLCrashReportSystemInfo.h"
+    header "PLCrashReportThreadInfo.h"
+    header "PLCrashReportFormatter.h"
+    header "PLCrashFeatureConfig.h"
+    
+    export *
+    module * { export * }
+}
+
+module SAPFoundation.Swift {
+    header "SAPFoundation-Swift.h"
+    requires objc
+}

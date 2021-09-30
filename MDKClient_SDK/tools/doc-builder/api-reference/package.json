@@ -1,0 +1,14 @@
+{
+  "name": "api-reference",
+  "version": "3.2.000",
+  "description": "api reference for MDK",
+  "author": "SAP",
+  "scripts": {
+    "gendoc2html": "./gendoc2html.command",
+    "gendoc2md": "./gendoc2md.command"
+  },
+  "devDependencies": {
+    "typedoc": "0.15.0",
+    "typedoc-plugin-markdown": "2.1.4"
+  }
+}

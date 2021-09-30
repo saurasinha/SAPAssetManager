@@ -1,0 +1,6 @@
+{
+  "AppName": "AssetManager",
+  "AppVersion": "2105.0.0",
+  "BundleID": "com.sap.mobile.apps.assetmanager.pgsdev",
+  "UrlScheme": "pgssamclient"
+}

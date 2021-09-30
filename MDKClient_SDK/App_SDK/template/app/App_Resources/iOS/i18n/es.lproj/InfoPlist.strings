@@ -1,0 +1,8 @@
+"NSFaceIDUsageDescription" = "MDK es compatible con la autenticación mediante Face ID en los dispositivos admitidos.";
+
+"NSCameraUsageDescription" = "Permitir utilización de cámara";
+
+"NSPhotoLibraryAddUsageDescription" = "La aplicación necesita permiso para editar fotos";
+
+"NSPhotoLibraryUsageDescription" = "Permitir acceso a la biblioteca de fotos";
+

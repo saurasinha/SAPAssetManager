@@ -1,0 +1,295 @@
+
+/* These are the client's default styles for built-in controls in iOS */
+
+/*
+This style will apply to all Pages in the application.
+This style is exposed.
+*/
+.ns-light PageWrapper {
+    background-color: white;
+}
+
+.ns-dark PageWrapper {
+    background-color: black;
+}
+
+/*
+This style applies to all the Pages in the application. It is not exposed.
+*/
+StackLayout {
+    text-align: center;
+}
+
+/* 
+This style will apply to all ActionBars in the application. In iOS,
+this is the NavigationBar. This style is exposed.
+*/
+.ns-light ActionBar {
+    color: #CAE4FB;
+    background-color: #354A5F;
+    font-family: "system";
+}
+
+.ns-dark ActionBar {
+    color: #0A84FF;
+    background-color: #161616;
+    font-family: "system";
+}
+
+/**
+This style will apply to all ActionBars title field. 
+This style is exposed.
+*/
+.ns-light ActionBarTitle {
+    color: #FAFAFA;
+    font-size: 17;
+    font-family: "system";
+    font-weight: 600;
+}
+
+.ns-dark ActionBarTitle {
+    color: #FFFFFF;
+    font-size: 17;
+    font-family: "system";
+    font-weight: 600;
+}
+
+/*
+This style will apply to all clickable toolbar items in the application.
+This style is exposed.
+*/
+.ns-light ToolBar {
+    color: #0A6ED1;
+    font-family: "system";
+    font-size: 17;
+    border-top-color: #A7A7AA;
+    border-width: 1;
+}
+
+/*
+TODO: the background color supposed to be #161616 and 80% opacity, but we cannot support alpha yet.
+*/
+.ns-dark ToolBar {
+    color: #0A84FF;
+    bartintcolor: #161616;
+    font-family: "system";
+    font-size: 17;
+    border-top-color: #38383A;
+    border-width: 1;
+}
+
+/*
+This style will apply to all non-clickable toolbar items (labels) by default.
+*/
+.ns-light ToolBarLabelStyle {
+    /* sapContent_LabelColor */
+    color: #6A6D70;
+    font-family: "system";
+    font-size: 11;
+}
+
+.ns-dark ToolBarLabelStyle {
+    color: #EBEBF5;
+    font-family: "system";
+    font-size: 11;
+}
+
+/* 
+This style applies to all the "Button" objects in the application 
+Unfortunately, that includes our Button control as well as the 
+Button used by NativeScript in the alerts, so we use the NonDialogButton
+style class bellow to further customize our button controls.
+*/
+Button {
+    height: 50;
+    background-color: #5D88AF;
+    border-radius: 8;
+    margin: 10;
+    padding: 10;
+    margin-left: 30;
+    margin-right: 30;
+    align-self: 'stretch';
+    font-family: "system";
+    font-size: 18;
+    text-align: center;
+    border-width: 1;
+    border-style: solid;
+    border-color: #5D88AF;
+}
+
+/* 
+This can't be included in the Button style or else the alert
+messages Buttons will have a light text that is impossible to see.
+*/
+.non-dialog-button {
+    color: #FAFAFA;
+}
+
+.ns-light .sap-icons {
+    font-family: "SAP-icons";
+    font-weight: 900;
+    font-size: 24;
+}
+
+.ns-dark .sap-icons {
+    color: white;
+    font-family: "SAP-icons";
+    font-weight: 900;
+    font-size: 24;
+}
+
+/* For custom back button for SideDrawer */
+.iosBackButtonIcon {
+    height: 22;
+}
+.iosBackButtonTitle {
+    font-size: 17;
+}
+.iosBackButtonTitle.ltr {
+    padding-left: 6;
+}
+
+/* --- Gonners --- */
+
+/* TODO: Remove with Label control */
+.list-view-row {
+    padding: 15;
+    text-align: left;
+    font-size: 20;
+}
+
+/* TODO: Remove with TextEntry control */
+TextField {
+    background-color: #FAFAFA;
+    border-width: 1;
+    border-style: solid;
+    border-color: #C7C7CC;
+    border-radius: 4;
+}
+
+.ns-light TabStrip {
+    /* default background-color of UIToolbar */
+    background-color: #F7F6F6;
+    selected-item-color: #0A6ED1;
+    un-selected-item-color: #6A6D70;
+}
+
+.ns-dark TabStrip {
+    background-color: #161616;
+    selected-item-color: #0A84FF;
+    un-selected-item-color: #FFFFFF;
+    highlight-color: #0A84FF;
+}
+
+.drawerContent-light {
+    background-color: #ffffff;
+}
+
+.drawerContent-dark {
+    background-color: #1C1C1E;
+}
+.sidedrawer-header-light {
+    color: #1C1C1E;
+    height: auto;
+    padding: 15;
+    border-bottom-width:0.5;
+    border-bottom-color: #686767;
+}
+.sidedrawer-header-dark {
+    color: #FFFFFF;
+    height: auto;
+    padding: 15;
+    border-bottom-width:0.5;
+    border-bottom-color: #38383A;
+}
+.sidedrawer-header-icon {
+    width: 20%;
+    margin-bottom: 20;
+}
+.sidedrawer-header-headline {
+    font-size: 20;
+    font-weight: bold;
+}
+.sidedrawer-header-subheadline-light {
+    color: #686767;
+    font-size: 16;
+    font-weight: 500;
+}
+
+.sidedrawer-header-subheadline-dark {
+    color: #FFFFFF;
+    font-size: 16;
+    font-weight: 500;
+}
+.sidedrawer-section{
+    padding-bottom: 10;
+}
+
+.sidedrawer-section-separator-light{
+    border-bottom-width:0.5;
+    border-bottom-color: #686767;
+}
+
+.sidedrawer-section-separator-dark{
+    border-bottom-width:0.5;
+    border-bottom-color: #38383A;
+}
+
+.sidedrawer-section-caption-light{
+    padding-top: 5;
+    padding-bottom: 5;
+    height:40;
+    font-size:16;
+    font-weight: 500;
+    color: #686767;
+}
+.sidedrawer-section-caption-dark{
+    padding-top: 5;
+    padding-bottom: 5;
+    padding-left: 15;
+    height:40;
+    font-size:16;
+    font-weight: 500;
+    /* color: #FAFAFAD9; */
+    color: #FFFFFF;
+}
+
+.sidedrawer-list-item-light{
+    color: black;
+    padding-left: 20;
+    padding-right: 20;
+}
+.sidedrawer-list-item-dark{
+    color: #FFFFFF;
+    padding-left: 20;
+    padding-right: 20;
+}
+.sidedrawer-list-item-active-light{
+    color: #FAFAFA;
+    background-color: #0A6ED1;
+}
+.sidedrawer-list-item-active-dark{
+    color: #FFFFFF;
+    background-color: #0A84FF;
+}
+
+.sidedrawer-list-item-onpress{
+    background-color: #EBE7E7;
+}
+.sidedrawer-list-item-icon{
+    height:24;
+    width: 10%;
+    margin-right: 20;
+}
+.sidedrawer-list-item-title{
+    font-size:16;
+    height:40;
+    width: 100%;
+    font-family: "system";
+}
+.ltr{
+    text-align: left;
+}
+.rtl{
+    text-align: right;
+}

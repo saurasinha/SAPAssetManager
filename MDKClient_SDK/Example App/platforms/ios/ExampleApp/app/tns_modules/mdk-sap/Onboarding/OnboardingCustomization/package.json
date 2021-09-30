@@ -1,0 +1,16 @@
+{
+  "name": "mdk-sap-onboarding-customization",
+  "version": "1.0.0",
+  "description": "Interact with FUIPasscodeController to customize the strings used in passcode, touchId and EULA pages.",
+  "main": "OnboardingCustomizationManager.js",
+   "nativescript": {
+      "platforms": {
+         "ios": "1.0.0",
+         "android": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP"
+}

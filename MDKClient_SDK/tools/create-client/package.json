@@ -1,0 +1,10 @@
+{
+  "name": "create-client",
+  "version": "1.0.0",
+  "description": "Generate a mobile development kit application project",
+  "scripts": {},
+  "author": "",
+  "license": "",
+  "dependencies": {},
+  "devDependencies": {}
+}

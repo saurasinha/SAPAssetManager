@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="__PACKAGE__"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:versionCode="1"
+	android:versionName="1.0">
+	
+	<supports-screens
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:largeScreens="true"
+		android:xlargeScreens="true"/>
+
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+	<application
+		android:name="sap.mdkclient.MDKAndroidApplication"
+		tools:replace="android:allowBackup"
+		android:allowBackup="false"
+		android:largeHeap="true"
+		android:icon="@drawable/icon"
+		android:label="@string/mdk_app_name"
+		android:resizeableActivity="false"
+		android:theme="@style/MDKAppTheme"
+		android:networkSecurityConfig="@xml/network_security_config">
+
+		<activity
+      android:name="sap.mdkclient.MDKAndroidActivity"
+			android:label="@string/mdk_app_name"
+			android:configChanges="keyboardHidden|orientation|screenSize|layoutDirection|locale|fontScale|uiMode"
+			android:theme="@style/LaunchScreenTheme"
+			android:launchMode="singleTop">
+
+			<meta-data android:name="SET_THEME_ON_LAUNCH" android:resource="@style/MDKAppTheme" />
+
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+	    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <!-- Accepts URIs that begin with "mdkclient://” -->
+        <data android:scheme="mdkclient" />
+	    </intent-filter>
+		</activity>
+		<activity android:name="com.tns.ErrorReportActivity" />
+		<provider
+				android:name="androidx.core.content.FileProvider"
+				android:authorities="com.sap.mobile.platform.SnowblindClient.fileprovider"
+				android:grantUriPermissions="true"
+				android:exported="false"
+				tools:replace="android:authorities">
+				<meta-data
+						android:name="android.support.FILE_PROVIDER_PATHS"
+						android:resource="@xml/filepaths" />
+		</provider>
+		<activity android:name="com.sap.cloud.mobile.onboarding.qrcodereader.google.QRCodeReaderActivity"
+				tools:node="remove"
+				tools:selector="com.sap.cloud.mobile.onboarding.qrcodereader.google" />
+		<service
+				android:name="com.sap.mdk.client.foundation.push.PushNotificationService">
+				<intent-filter>
+						<action android:name="com.google.firebase.MESSAGING_EVENT"/>
+				</intent-filter>
+		</service>
+	</application>
+</manifest>

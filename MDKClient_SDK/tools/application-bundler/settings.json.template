@@ -1,0 +1,12 @@
+{
+  "application-name": "AssetWorkManager",
+  "create-bundle": false,
+  "editor-export": "",
+  "externals": [
+    "tns-core-modules/file-system",
+    "tns-core-modules/ui/dialogs"
+  ],
+  "nativescript-project": "/path/to/nativescript-project-directory",
+  "seam-project": "/path/to/seam-project-directory",
+  "watch": false
+}

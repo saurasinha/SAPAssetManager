@@ -1,0 +1,108 @@
+{
+  "_from": "@nstudio/nativescript-pulltorefresh@2.0.0",
+  "_id": "@nstudio/nativescript-pulltorefresh@2.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Alc1lEOAt+2dWpoRKl7MiGFaFxD5veGNLVjBDdWKfTdFnAAbBkQEU/wVH3f8hYs0LB6z/Zk5dFteUDgZuG7Q1g==",
+  "_location": "/@nstudio/nativescript-pulltorefresh",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@nstudio/nativescript-pulltorefresh@2.0.0",
+    "name": "@nstudio/nativescript-pulltorefresh",
+    "escapedName": "@nstudio%2fnativescript-pulltorefresh",
+    "scope": "@nstudio",
+    "rawSpec": "2.0.0",
+    "saveSpec": null,
+    "fetchSpec": "2.0.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@nstudio/nativescript-pulltorefresh/-/nativescript-pulltorefresh-2.0.0.tgz",
+  "_shasum": "9579ff80829a1f0fcb14f5f1c38821a2bfe2a258",
+  "_spec": "@nstudio/nativescript-pulltorefresh@2.0.0",
+  "_where": "/Users/priyaranjankumar/Downloads/ipa_new/SAPAssetManager/MDKClient_SDK/AssetManager",
+  "author": {
+    "name": "Brad Martin",
+    "email": "bradwaynemartin@gmail.com",
+    "url": "https://github.com/bradmartin"
+  },
+  "bugs": {
+    "url": "https://github.com/nstudio/nativescript-pulltorefresh/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A NativeScript plugin to provide the Pull to Refresh control on any view.",
+  "devDependencies": {
+    "husky": "^3.0.0",
+    "lint-staged": "^9.1.0",
+    "nativescript-ui-listview": "~8.0.1",
+    "prettier": "^1.19.0",
+    "rimraf": "^2.6.3",
+    "tns-core-modules": "~6.2.0",
+    "tns-platform-declarations": "~6.2.0",
+    "tslint": "~5.20.0",
+    "typescript": "~3.5.3"
+  },
+  "homepage": "https://github.com/nstudio/nativescript-pulltorefresh",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "NativeScript",
+    "native",
+    "script",
+    "Pull Refresh",
+    "SwipeRefreshLayout",
+    "Material Design",
+    "UIRefreshControl",
+    "android",
+    "ios",
+    "bradmartin"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "**/*.{js, css, ts, json, scss, html, xml, md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "main": "pulltorefresh",
+  "name": "@nstudio/nativescript-pulltorefresh",
+  "nativescript": {
+    "platforms": {
+      "ios": "3.0.1",
+      "android": "3.0.1"
+    },
+    "plugin": {
+      "nan": "true",
+      "pan": "true",
+      "core3": "true",
+      "category": "Interface"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nstudio/nativescript-pulltorefresh.git"
+  },
+  "scripts": {
+    "build": "npm i && tsc",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
+    "demo.android": "cd ../demo && tns run android",
+    "demo.ios": "cd ../demo && tns run ios",
+    "development.setup": "npm run setup && npm link && cd ../demo && npm link nativescript-pulltorefresh && cd ../src",
+    "generate.typings.ios": "cd ../demo && TNS_DEBUG_METADATA_PATH=\"$(pwd)/metadata\" tns build ios && TNS_TYPESCRIPT_DECLARATIONS_PATH=\"$(pwd)/typings\" tns build ios && echo 'Now look for your library typings in demo/typings!'",
+    "make-changelog": "cd ../ && github_changelog_generator -u nstudio -p nativescript-pulltorefresh --token",
+    "publish": "cd ../publish && ./publish.sh",
+    "setup": "npm i && tsc && cd ../demo && npm i && tsc",
+    "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
+    "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
+    "tsc": "tsc -skipLibCheck",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\" --exclude \"*demo*/platforms/**\""
+  },
+  "typings": "index.d.ts",
+  "version": "2.0.0"
+}

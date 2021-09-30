@@ -1,0 +1,1 @@
+module.exports = "restoring_app=正在加载...\ninitializing_odata=正在初始化离线数据\nqr_code_message_success=已成功加载新的连接设置。\nqr_code_message_fail=无法加载新的连接设置。\nunable_to_load_new_connection_setttings=无法加载新的连接设置。请先注销/重置，然后再加载新的连接设置。\noverride_configuration_settings=从覆盖配置文件成功加载了新的连接设置。\nupdate_fail_roll_back=应用更新失败，将回滚至之前的元数据定义\\n原因：\nclose_drawer=关闭抽屉\ndismiss=忽略\nback=返回";

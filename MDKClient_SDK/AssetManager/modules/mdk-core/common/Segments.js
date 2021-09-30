@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Segments;
+(function (Segments) {
+    Segments["ActionResults"] = "#actionresults";
+    Segments["Page"] = "#page";
+    Segments["ClientData"] = "#clientdata";
+    Segments["Control"] = "#control";
+    Segments["Property"] = "#property";
+    Segments["First"] = "#first";
+    Segments["Value"] = "#value";
+    Segments["SelectedValue"] = "#selectedvalue";
+    Segments["SelectedTarget"] = "#selectedtarget";
+    Segments["SelectedRow"] = "#selectedrow";
+    Segments["Last"] = "#last";
+    Segments["Count"] = "#count";
+    Segments["Index"] = "#index";
+    Segments["Application"] = "#application";
+    Segments["FilterValue"] = "#filtervalue";
+})(Segments = exports.Segments || (exports.Segments = {}));

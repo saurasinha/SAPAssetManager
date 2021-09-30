@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "removeComments": true,
+        "inlineSourceMap": false,
+        "sourceMap": false,
+        "noEmitOnError": false,
+        "noEmitHelpers": true,
+        "declaration": true,
+        "resolveJsonModule": true,
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "mdk-sap":["./plugins/SAP/index.ts"],
+            "*": [
+                "./node_modules/tns-core-modules/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "platforms",
+        "modules",
+        "app",
+        "build.definitions"
+    ]
+}

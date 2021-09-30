@@ -1,0 +1,25 @@
+{
+  "ConnectionSettings": {
+    "AppId": "<Enter your SAP Mobile Services app ID here>",
+    "ClientId": "<Enter your SAP Mobile Services Client ID here>",
+    "ServerUrl": "<Enter your SAP Mobile Services Endpoint here>",
+    "AuthorizationEndpointUrl": "<Enter your SAP Mobile Services Authorization Endpoint here>",
+    "RedirectUrl": "<Enter your SAP Mobile Services Authorization Redirect URL here>",
+    "TokenUrl": "<Enter your SAP Mobile Services Authorization Token Url here>",
+    "ServiceTimeZoneAbbreviation": "<Enter server time zone abbreviation here>"
+  },
+  "Demo": {
+    "ConnectionSettings": {
+      "AppId": "<Enter your SAP Mobile Services app ID here>",
+      "ClientId": "<Enter your SAP Mobile Services Client ID here>",
+      "ServerUrl": "<Enter your SAP Mobile Services Endpoint here>",
+      "AuthorizationEndpointUrl": "<Enter your SAP Mobile Services Authorization Endpoint here>",
+      "RedirectUrl": "<Enter your SAP Mobile Services Authorization Redirect URL here>",
+      "TokenUrl": "<Enter your SAP Mobile Services Authorization Token Url here>",
+      "ServiceTimeZoneAbbreviation": "<Enter server time zone abbreviation here>"
+    },
+    "DBPath": "<.udb demo database path (relative to the iOS Documents folder or Android's private external storage folder) i.e. Documents/abc/dbname.udb , or /<extStorage>/Andrdoid/data/packageName/files/abc/dbname.ubb should be 'abc/dbname.udb'>",
+    "BundlePath": "<Demo bundle path (relative to the iOS Documents folder or Android's private external storage folder) i.e. Documents/abc/anything.js or /<extStorage>/Andrdoid/data/packageName/files/abc/anything.js should be 'abc/anything.js'>",
+    "DemoAppLanguage": "<Specify language code (i.e. en) if the demo db can support sap-language parameter>"
+  }    
+}

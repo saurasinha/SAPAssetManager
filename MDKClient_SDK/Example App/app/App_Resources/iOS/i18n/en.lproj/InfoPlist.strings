@@ -1,0 +1,9 @@
+/* Localized versions of Info.plist keys */
+
+NSFaceIDUsageDescription = "MDK supports Face ID authentication on supported devices";
+
+NSCameraUsageDescription = "Allow camera usage";
+
+NSPhotoLibraryAddUsageDescription = "Our application needs permission to write photos";
+
+NSPhotoLibraryUsageDescription = "Allow photo library access";

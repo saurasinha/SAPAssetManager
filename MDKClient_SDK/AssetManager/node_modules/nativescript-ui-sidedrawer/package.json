@@ -1,0 +1,90 @@
+{
+  "_from": "nativescript-ui-sidedrawer@8.0.1",
+  "_id": "nativescript-ui-sidedrawer@8.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-QeciSlKMWW9snX0f/Nve3RakaPTiDNKJWZwiloiyNI7rgG4nUZfsNHGkPqytENXDqLUxKaihziruUGOtguSpMg==",
+  "_location": "/nativescript-ui-sidedrawer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "nativescript-ui-sidedrawer@8.0.1",
+    "name": "nativescript-ui-sidedrawer",
+    "escapedName": "nativescript-ui-sidedrawer",
+    "rawSpec": "8.0.1",
+    "saveSpec": null,
+    "fetchSpec": "8.0.1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-ui-sidedrawer/-/nativescript-ui-sidedrawer-8.0.1.tgz",
+  "_shasum": "ac62b1b5450f2ddde22b8e0691134bdca35d032b",
+  "_spec": "nativescript-ui-sidedrawer@8.0.1",
+  "_where": "/Users/priyaranjankumar/Downloads/ipa_new/SAPAssetManager/MDKClient_SDK/AssetManager",
+  "author": {
+    "name": "NativeScript Team",
+    "email": "nativescriptplugins@progress.com"
+  },
+  "bootstrapper": "nativescript-plugin-seed",
+  "bugs": {
+    "url": "https://github.com/NativeScript/nativescript-ui-feedback/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "nativescript-ui-core": "~4.0.0"
+  },
+  "deprecated": false,
+  "description": "Add additional space to your app. Use it for navigation or custom content. Slides in from all four sides of the screen. Part of Progress NativeScript UI - a set of professional ui components built for NativeScript (also known as Pro UI).",
+  "devDependencies": {
+    "@angular/common": "~8.2.0",
+    "@angular/compiler": "~8.2.0",
+    "@angular/compiler-cli": "~8.2.0",
+    "@angular/core": "~8.2.0",
+    "@angular/forms": "~8.2.0",
+    "@angular/platform-browser": "~8.2.0",
+    "@angular/platform-browser-dynamic": "~8.2.0",
+    "@angular/router": "~8.2.0",
+    "nativescript-angular": "~8.20.0",
+    "nativescript-dev-debugging": "^2.0.0",
+    "prompt": "^1.0.0",
+    "rimraf": "^2.5.0",
+    "rxjs": "^6.3.3",
+    "tns-core-modules": "^6.2.0",
+    "tns-platform-declarations": "^6.2.0",
+    "tslint": "~5.11.0",
+    "typescript": "~3.5.3",
+    "zone.js": "^0.8.4"
+  },
+  "homepage": "https://github.com/NativeScript/nativescript-ui-feedback",
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android",
+    "iOS",
+    "SideDrawer",
+    "DrawerNavigation",
+    "RadSideDrawer",
+    "drawer",
+    "navigation",
+    "side-drawer",
+    "drawer-navigation",
+    "ProUI",
+    "Pro-UI"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "main": "ui-sidedrawer",
+  "name": "nativescript-ui-sidedrawer",
+  "nativescript": {
+    "platforms": {
+      "android": "6.0.0",
+      "ios": "6.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NativeScript/nativescript-ui-feedback.git"
+  },
+  "typings": "index.d.ts",
+  "version": "8.0.1"
+}

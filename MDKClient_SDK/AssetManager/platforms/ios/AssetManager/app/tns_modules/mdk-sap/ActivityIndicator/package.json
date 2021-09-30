@@ -1,0 +1,15 @@
+{
+  "name": "mdk-sap-process-activity",
+  "version": "1.0.0",
+  "description": "Launch a native Fiori process activity indicator.",
+  "main": "ActivityIndicator.js",
+   "nativescript": {
+      "platforms": {
+         "ios": "1.0.0"
+      }
+   },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SAP"
+}

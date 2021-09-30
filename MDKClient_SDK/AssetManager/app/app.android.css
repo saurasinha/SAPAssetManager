@@ -1,0 +1,343 @@
+
+/* These are the client's default styles for built-in controls in Android */
+
+.ns-dark StackLayout {
+    background-color: #1C2228;
+}
+
+.ns-dark PageWrapper {
+    background-color: #1C2228;
+}
+
+/*
+This style will apply to action bar if search is enabled.
+This style is exposed.
+*/
+.ns-light ActionBarForSearch {
+    color: #6a6d70;
+    background-color: #ffffff;
+}
+
+.ns-dark ActionBarForSearch {
+    color: #D3D7D9;
+    background-color: #27313B;
+}
+
+.ns-light TitleStyleForSearch {
+    background-color: #808080;
+}
+
+.ns-dark TitleStyleForSearch {
+    background-color: #1C2228;
+}
+
+/*
+This style will apply to all Pages in the application.
+This style is exposed.
+*/
+.ns-light ToolBar {
+    background-color: #ffffff;
+    border-top-color: #eeeeef;
+    border-top-width: 1;
+}
+
+.ns-dark ToolBar {
+    background-color: #1C2228;
+    border-top-color: #668696A9;
+    border-top-width: 1;
+}
+
+ToolBar :disabled {
+    color: #808080;
+}
+
+
+.ns-light ToolBarItemStyle {
+    color: #0A6ED1;
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size: 14sp;
+}
+
+.ns-dark ToolBarItemStyle {
+    color: #91C8F6;
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size: 14sp;
+}
+
+.ns-light ToolBarItemDisabledStyle {
+    color: #0A6ED1;
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size: 14sp;
+    opacity: 0.5;
+}
+
+.ns-dark ToolBarItemDisabledStyle {
+    color: #91C8F6;
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size: 14sp;
+    opacity: 0.5;
+}
+
+.ns-light ToolBarItemPressedStyle {
+    color: #e0eef6;
+}
+
+.ns-dark ToolBarItemPressedStyle {
+    color: #2a3641;
+}
+
+.ns-light ToolBarContainedItemStyle {
+    background-color: #0A6ED1;
+    color: #ffffff;
+    border-radius: 4;
+    margin-left: 16;
+    margin-right: 16;
+}
+
+.ns-dark ToolBarContainedItemStyle {
+    background-color: #91C8F6;
+    color: #1C2228;
+    border-radius: 4;
+    margin-left: 16;
+    margin-right: 16;
+}
+
+.ns-light ToolBarContainedItemDisabledStyle {
+    background-color: #0A6ED1;
+    color: #ffffff;
+    border-radius: 4;
+    margin-left: 16;
+    margin-right: 16;
+    opacity: 0.5;
+}
+
+.ns-dark ToolBarContainedItemDisabledStyle {
+    background-color: #91C8F6;
+    color: #1C2228;
+    border-radius: 4;
+    margin-left: 16;
+    margin-right: 16;
+    opacity: 0.5;
+}
+
+.ns-light ToolBarContainedItemPressedStyle {
+    color: #2987be;
+}
+
+.ns-dark ToolBarContainedItemPressedStyle {
+    color: #a3d1f7;
+}
+
+/*
+This style will apply to all non-clickable toolbar items (labels) by default.
+*/
+.ns-light ToolBarLabelStyle {
+    color: #333333;
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size: 16sp;
+    border-radius: 4;
+}
+
+.ns-dark ToolBarLabelStyle {
+    color: #D3D7D9;
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size: 16sp;
+    border-radius: 4;
+}
+
+Button {
+    color: #0a6ed1;
+}
+
+/*  
+BCP-2170021402: introduce new DialogButton type 
+because Button is used by alert() and ns dialog (tns-core-modules/dialogs),
+and these two components cannot recognise .ns-light and .ns-dark identifier
+*/
+.ns-light DialogButton {
+    color: #0a6ed1;
+}
+
+.ns-dark DialogButton {
+    color: #91C8F6;
+}
+
+.ns-light TabStrip {
+    background-color: #ffffff;
+    border-top-color: #eeeeef;
+    border-top-width: 1;
+    selected-item-color: #0A6ED1;
+    un-selected-item-color: #6A6D70;
+}
+
+.ns-dark TabStrip {
+    background-color: #27313B;
+    selected-item-color: #91C8F6;
+    un-selected-item-color: #D3D7D9;
+    highlight-color: #91C8F6;
+}
+
+.ns-light .sap-icons {
+    font-family: "SAP-icons";
+    font-weight: 900;
+}
+
+.ns-dark .sap-icons {
+    color: white;
+    font-family: "SAP-icons";
+    font-weight: 900;
+}
+
+.sap-icons-actionbar-x-small {
+    font-family: "SAP-icons";
+    font-weight: 900;
+    font-size: 6;
+    color: white;
+}
+
+.sap-icons-actionbar-small {
+    font-family: "SAP-icons";
+    font-weight: 900;
+    font-size: 8;
+    color: white;
+}
+
+.sap-icons-actionbar-medium {
+    font-family: "SAP-icons";
+    font-weight: 900;
+    font-size: 10;
+    color: white;
+}
+
+.drawerContent-light{
+    background-color: #ffffff;
+}
+
+.drawerContent-dark{
+    background-color: #1C2228;
+}
+
+.sidedrawer-header-light{
+    height: auto;
+    padding: 16;
+    border-bottom-width: 1;
+    border-bottom-color: rgb(229, 229, 229); 
+    color: black;
+}
+
+.sidedrawer-header-dark{
+    height: auto;
+    padding: 16;
+    border-bottom-width: 1;
+    border-bottom-color: rgb(229, 229, 229);
+    color: #FAFAFA;
+    background-color: #27313B;
+}
+
+.sidedrawer-header-icon{
+    height: 48;
+    width: 48;
+    margin-bottom: 22;
+}
+.sidedrawer-header-icon.ltr{
+    horizontal-align: left;
+}
+.sidedrawer-header-icon.rtl{
+    horizontal-align: right;
+}
+
+.sidedrawer-header-headline{
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size: 20;
+    line-height: 24;
+}
+.sidedrawer-header-subheadline-light{
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size: 14;
+    line-height: 20;
+    color: rgb(106, 109, 112);
+}
+
+.sidedrawer-header-subheadline-dark{
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size: 14;
+    line-height: 20;
+    color: #FAFAFA;
+}
+.sidedrawer-section{
+    padding-bottom: 10;
+}
+.sidedrawer-section-separator-light{
+    border-bottom-width: 1;
+    border-bottom-color:rgb(229, 229, 229);
+}
+.sidedrawer-section-separator-dark{
+    border-bottom-width: 1;
+    border-bottom-color: #668696A9;
+}
+.sidedrawer-section-caption-light{
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    padding: 16;
+    line-height: 16;
+    font-size: 16;
+    color: rgb(106, 109, 112);
+}
+
+.sidedrawer-section-caption-dark{
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    padding: 16;
+    line-height: 16;
+    font-size: 16;
+    color: #D3D7D9;
+}
+
+.tablet-ltr{
+    padding-left: 24;
+}
+.tablet-rtl{
+    padding-right: 24;
+}
+.sidedrawer-list-item-light{
+    height: 48;
+    color: black;
+    padding-left: 16;
+    padding-right: 16;
+}
+
+.sidedrawer-list-item-dark{
+    height: 48;
+    color: #FAFAFA;
+    padding-left: 16;
+    padding-right: 16;
+}
+.sidedrawer-list-item.tablet{
+    padding-left: 24;
+}
+.sidedrawer-list-item-active-light{
+    color: rgb(8, 84, 160);
+    background-color: rgb(209, 232, 255);
+}
+
+.sidedrawer-list-item-active-dark{
+    color: #FAFAFA;
+    background-color: #2991C8F6;
+}
+.sidedrawer-list-item-onpress{
+    background-color: rgb(235, 231, 231);
+}
+.sidedrawer-list-item-icon{
+    height:24;
+    width: 24;
+    margin-right: 32;
+}
+.sidedrawer-list-item-title{
+    font-family: "f72_regular", "f72_bold", "f72_italic", "f72_bold_italic";
+    font-size:16;
+    line-height: 24;
+    vertical-align: middle;
+    width: 100%;
+}

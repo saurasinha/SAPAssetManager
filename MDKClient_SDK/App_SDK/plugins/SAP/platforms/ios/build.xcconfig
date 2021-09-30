@@ -1,0 +1,10 @@
+//
+//  build.xcconfig
+//  SnowblindFramework
+//
+//  Created by Erickson, Ronnie on 10/3/16.
+//  Copyright (C) 2016 SAP. All rights reserved.
+//
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = Yes
+OTHER_LDFLAGS = $(inherited) -framework "SAPMDC" -framework "SAPFiori" -framework "SAPFioriFlows" -framework "SAPFoundation" -framework "SAPOData" -framework "SAPOfflineOData" -framework "SAPCommon"
+

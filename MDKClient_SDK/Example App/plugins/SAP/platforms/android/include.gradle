@@ -1,0 +1,43 @@
+println '---------------------------INCLUDE.GRADLE---------------------------------'
+println "$projectDir"
+
+android {
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+buildscript {
+    def versionsGradle = file("../../../../AndroidStudioProjects/MDKClient/versions.gradle")
+    if (versionsGradle.exists()) {
+        apply from: versionsGradle.getAbsolutePath()
+    } else {
+        def currentFileDir = buildscript.sourceFile.getParent()
+        apply from: "$currentFileDir/versions.gradle"
+    }
+}
+
+dependencies {
+    implementation deps.android_lifecycle
+    implementation deps.fiori
+    implementation deps.flowsv2
+    implementation deps.onboarding
+    implementation deps.odata
+    implementation deps.offlineOData
+    implementation deps.foundation
+    implementation deps.chart
+    implementation deps.tony19_logback
+    implementation deps.slf4j_api
+    implementation deps.slf4j_jul
+    implementation deps.firebase
+    
+    annotationProcessor deps.androidx_annotations
+    implementation deps.glide.runtime
+    implementation deps.glide.annotations
+    annotationProcessor deps.glide.compiler
+    implementation deps.glide.okhttp3_integration
+    implementation deps.okhttp3
+    implementation deps.gson
+
+}

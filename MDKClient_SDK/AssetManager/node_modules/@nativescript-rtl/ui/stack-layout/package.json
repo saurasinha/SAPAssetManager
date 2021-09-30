@@ -1,0 +1,5 @@
+{
+    "name": "stack-layout",
+    "main": "stack-layout.js",
+    "typings": "index.d.ts"
+}

@@ -1,0 +1,8 @@
+"NSFaceIDUsageDescription" = "Az MDK támogatja a Face ID-alapú hitelesítést a támogatott eszközökön";
+
+"NSCameraUsageDescription" = "Kamera használatának engedélyezése";
+
+"NSPhotoLibraryAddUsageDescription" = "Az alkalmazás engedélyt igényel a fotókhoz";
+
+"NSPhotoLibraryUsageDescription" = "Fotótárhoz való hozzáférés engedélyezése";
+

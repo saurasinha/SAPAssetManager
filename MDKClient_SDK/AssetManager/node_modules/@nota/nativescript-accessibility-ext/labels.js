@@ -1,0 +1,4 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("./ui/label/label");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGFiZWxzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibGFiZWxzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNEJBQTBCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICcuL3VpL2xhYmVsL2xhYmVsJztcbmV4cG9ydCAqIGZyb20gJy4vdWkvbGFiZWwvbGFiZWwnO1xuIl19

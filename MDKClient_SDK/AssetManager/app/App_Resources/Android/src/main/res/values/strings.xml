@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="mdk_app_name">MDKClient</string>
+    <string name="file_provider">com.sap.mobile.platform.SnowblindClient.fileprovider</string>
+</resources>
